@@ -1,0 +1,17 @@
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\bin\Debug\net9.0-windows\Espere aqui.exe
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\bin\Debug\net9.0-windows\Espere aqui.deps.json
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\bin\Debug\net9.0-windows\Espere aqui.runtimeconfig.json
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\bin\Debug\net9.0-windows\Espere aqui.dll
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\bin\Debug\net9.0-windows\Espere aqui.pdb
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\Espere_aqui.Form1.resources
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\Espere aqui.csproj.GenerateResource.cache
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\Espere aqui.GeneratedMSBuildEditorConfig.editorconfig
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\Espere aqui.AssemblyInfoInputs.cache
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\Espere aqui.AssemblyInfo.cs
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\Espere aqui.csproj.CoreCompileInputs.cache
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\Espere aqui.sourcelink.json
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\Espere aqui.dll
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\refint\Espere aqui.dll
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\Espere aqui.pdb
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\Espere aqui.genruntimeconfig.cache
+C:\PROYECTOS\ANÁLISIS\PROYECTO 2\PY2--Espere-aqui-pronto-le-atenderemos\Espere aqui\obj\Debug\net9.0-windows\ref\Espere aqui.dll
