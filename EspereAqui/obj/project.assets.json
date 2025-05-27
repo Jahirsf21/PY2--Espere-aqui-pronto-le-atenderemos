@@ -8,23 +8,23 @@
     "net9.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sermo\\.nuget\\packages\\": {},
+    "C:\\Users\\deisl\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sermo\\OneDrive - Estudiantes ITCR\\TEC\\2025\\I Semestre\\Ánalisis\\Proyecto 2\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\EspereAqui.csproj",
+      "projectUniqueName": "C:\\PROYECTOS\\ANÁLISIS\\EspereAqui\\EspereAqui.csproj",
       "projectName": "EspereAqui",
-      "projectPath": "C:\\Users\\sermo\\OneDrive - Estudiantes ITCR\\TEC\\2025\\I Semestre\\Ánalisis\\Proyecto 2\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\EspereAqui.csproj",
-      "packagesPath": "C:\\Users\\sermo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sermo\\OneDrive - Estudiantes ITCR\\TEC\\2025\\I Semestre\\Ánalisis\\Proyecto 2\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\obj\\",
+      "projectPath": "C:\\PROYECTOS\\ANÁLISIS\\EspereAqui\\EspereAqui.csproj",
+      "packagesPath": "C:\\Users\\deisl\\.nuget\\packages\\",
+      "outputPath": "C:\\PROYECTOS\\ANÁLISIS\\EspereAqui\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\sermo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\deisl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -51,7 +51,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0-windows7.0": {
@@ -75,7 +75,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

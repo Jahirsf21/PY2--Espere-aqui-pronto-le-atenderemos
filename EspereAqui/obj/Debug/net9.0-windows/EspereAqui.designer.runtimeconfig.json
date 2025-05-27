@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\sermo\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\sermo\\.nuget\\packages",
+      "C:\\Users\\deisl\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\deisl\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

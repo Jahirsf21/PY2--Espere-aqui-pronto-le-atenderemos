@@ -1,7 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\sermo\\OneDrive - Estudiantes ITCR\\TEC\\2025\\I Semestre\\\u00C1nalisis\\Proyecto 2\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\logicadenegocios\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\logicadenegocios\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\logicadenegocios\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\logicadenegocios\\consultorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\consultorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Especialidad.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Especialidad.cs",
+              "RelativeDocumentMoniker": "LogicadeNegocios\\Especialidad.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Especialidad.cs",
+              "RelativeToolTip": "LogicadeNegocios\\Especialidad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T20:24:54.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Paciente.cs",
+              "RelativeDocumentMoniker": "LogicadeNegocios\\Paciente.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Paciente.cs",
+              "RelativeToolTip": "LogicadeNegocios\\Paciente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T20:21:37.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Clinica.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Clinica.cs",
+              "RelativeDocumentMoniker": "LogicadeNegocios\\Clinica.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Clinica.cs",
+              "RelativeToolTip": "LogicadeNegocios\\Clinica.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T20:14:49.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Consultorio.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Consultorio.cs",
+              "RelativeDocumentMoniker": "LogicadeNegocios\\Consultorio.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Consultorio.cs",
+              "RelativeToolTip": "LogicadeNegocios\\Consultorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T20:11:22.374Z",
+              "EditorCaption": ""
             }
           ]
         }
