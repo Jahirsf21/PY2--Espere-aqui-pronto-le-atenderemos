@@ -1,11 +1,11 @@
 C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.exe
-C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.deps.json
-C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.runtimeconfig.json
 C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.dll
-C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.pdb
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.Properties.Resources.resources
 C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.Modo_auto.resources
-C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.Modo_manual.resources
-C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.Seleccion_de_modos.resources
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_manual.resources
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_principal.resources
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_simulacion.resources
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_modos.resources
 C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.csproj.GenerateResource.cache
 C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.GeneratedMSBuildEditorConfig.editorconfig
 C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.AssemblyInfoInputs.cache
@@ -15,6 +15,8 @@ C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.sourcelink
 C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.dll
 C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\refint\EspereAqui.dll
 C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.pdb
+C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.deps.json
+C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.runtimeconfig.json
+C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.pdb
 C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.genruntimeconfig.cache
 C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\ref\EspereAqui.dll
-C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_principal.resources

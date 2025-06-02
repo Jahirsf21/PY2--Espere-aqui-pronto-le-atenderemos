@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EspereAqui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4d89f9184de51f43d0815a02a18f6c865992638")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02f8815e3044ca1e46d67e8666f82da6b06e3c56")]
 [assembly: System.Reflection.AssemblyProductAttribute("EspereAqui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EspereAqui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

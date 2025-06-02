@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace EspereAqui.LogicadeNegocios
 {
-    public class Especialidad {
+    public class Especialidad
+    {
         public string nombre { get; set; }
 
         public Especialidad(string nombre)
         {
             this.nombre = nombre;
         }
+    }
+
 }

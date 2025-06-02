@@ -7,13 +7,13 @@
     <Compile Update="UI\Ventana manual.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UI\Ventana modos.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="UI\Ventana principal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\Ventana simulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Ventana_modos.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
