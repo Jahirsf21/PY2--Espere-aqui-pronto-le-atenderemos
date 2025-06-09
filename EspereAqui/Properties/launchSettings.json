@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EspereAqui": {
+      "commandName": "Project",
+      "hotReloadEnabled": false
+    }
+  }
+}

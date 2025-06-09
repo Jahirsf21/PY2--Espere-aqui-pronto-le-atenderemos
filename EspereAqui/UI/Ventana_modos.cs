@@ -1,56 +1,55 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using EspereAqui.LogicadeNegocios;
 
 namespace EspereAqui.UI
 {
-
-
     public partial class Ventana_modos : Form
     {
         private Ventana_principal principal;
-        private Modo_auto auto;
-        private Ventana_manual manual;
+        private Ventana_simulacion simulacion;
+
         public Ventana_modos(Ventana_principal principal)
         {
             InitializeComponent();
             this.principal = principal;
         }
 
-        private void button3_Click(object sender, EventArgs e) // Regresar
+        private void Ventana_modos_Load(object sender, EventArgs e)
+        {
+            tableLayoutPanel1.Location = new Point(0, 0);
+            pictureBox1.Controls.Add(tableLayoutPanel1);
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e) 
         {
             principal.Show();
             principal.StartPosition = FormStartPosition.CenterScreen;
             this.Hide();
         }
 
-
-        private void button2_Click(object sender, EventArgs e) // Manual
+        private void btnModoManual_Click(object sender, EventArgs e) 
         {
-            if (manual == null || manual.IsDisposed)
+            if (simulacion == null || simulacion.IsDisposed)
             {
-                manual = new Ventana_manual(this);
-                manual.StartPosition = FormStartPosition.CenterScreen;
+                simulacion = new Ventana_simulacion("manual");
+                simulacion.StartPosition = FormStartPosition.CenterScreen;
             }
-            manual.Show();
+            simulacion.Show();
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e) // auto
+        private void btnModoAuto_Click(object sender, EventArgs e) 
         {
-            if (auto == null || auto.IsDisposed)
+            if (simulacion == null || simulacion.IsDisposed)
             {
-                auto = new Modo_auto(this);
-                auto.StartPosition = FormStartPosition.CenterScreen;
+                simulacion = new Ventana_simulacion("auto");
+                simulacion.StartPosition = FormStartPosition.CenterScreen;
             }
-            auto.Show();
+            simulacion.Show();
             this.Hide();
         }
+
     }
 }

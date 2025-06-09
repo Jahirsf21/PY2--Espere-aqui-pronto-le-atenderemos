@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EspereAqui.UI
@@ -17,9 +11,9 @@ namespace EspereAqui.UI
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-        private Ventana_modos ventanaModos;
 
-        private void button1_Click(object sender, EventArgs e) // ir a modos
+        private Ventana_modos ventanaModos;
+        private void btnEmpezar_Click(object sender, EventArgs e)
         {
             if (ventanaModos == null || ventanaModos.IsDisposed)
             {
@@ -28,6 +22,13 @@ namespace EspereAqui.UI
             }
             ventanaModos.Show();
             this.Hide();
+        }
+
+        private void Ventana_principal_Load(object sender, EventArgs e)
+        {
+
+            tableLayoutPanel1.Location = new Point(0, 0);
+            pictureBox1.Controls.Add(tableLayoutPanel1);
         }
     }
 }

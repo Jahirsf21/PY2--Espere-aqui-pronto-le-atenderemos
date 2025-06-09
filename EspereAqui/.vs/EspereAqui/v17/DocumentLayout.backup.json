@@ -3,218 +3,266 @@
   "WorkspaceRootPath": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\logicadenegocios\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\logicadenegocios\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana auto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana auto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\ui\\ventana auto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana auto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\logicadenegocios\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana_modos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana_modos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana_modos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana_modos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana manual.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana manual.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\ui\\ventana_modos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana_modos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\ui\\ventana manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana manual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana simulacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana simulacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\formularios\\crearpacientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\crearpacientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\formularios\\crearpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\crearpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\logicadenegocios\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\formularios\\editarconsultorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\editarconsultorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\formularios\\crearconsultorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\crearconsultorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\ui\\formularios\\crearpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\crearpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\espereaqui\\ui\\ventana principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\ui\\ventana_modos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana_modos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 100,
       "DocumentGroups": [
         {
-          "DockedWidth": 370,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 673,
+          "SelectedChildIndex": 10,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Ventana principal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana principal.cs",
-              "RelativeDocumentMoniker": "UI\\Ventana principal.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana principal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI\\Ventana principal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T04:08:54.94Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Clinica.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Clinica.cs",
-              "RelativeDocumentMoniker": "LogicadeNegocios\\Clinica.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Clinica.cs",
-              "RelativeToolTip": "LogicadeNegocios\\Clinica.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T06:16:20.581Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Especialidad.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Especialidad.cs",
-              "RelativeDocumentMoniker": "LogicadeNegocios\\Especialidad.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Especialidad.cs",
-              "RelativeToolTip": "LogicadeNegocios\\Especialidad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CrearPacientes.Designer.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Formularios\\CrearPacientes.Designer.cs",
+              "RelativeDocumentMoniker": "UI\\Formularios\\CrearPacientes.Designer.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Formularios\\CrearPacientes.Designer.cs",
+              "RelativeToolTip": "UI\\Formularios\\CrearPacientes.Designer.cs",
+              "ViewState": "AgIAANUAAAAAAAAAAAAYwBEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T06:06:46.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Paciente.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Paciente.cs",
-              "RelativeDocumentMoniker": "LogicadeNegocios\\Paciente.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Paciente.cs",
-              "RelativeToolTip": "LogicadeNegocios\\Paciente.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T06:00:34.253Z",
+              "WhenOpened": "2025-06-09T07:32:36.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Ventana manual.Designer.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana manual.Designer.cs",
-              "RelativeDocumentMoniker": "UI\\Ventana manual.Designer.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana manual.Designer.cs",
-              "RelativeToolTip": "UI\\Ventana manual.Designer.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAALQAAAABAAAAAAAAAA==",
+              "Title": "CrearPacientes.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs",
+              "RelativeDocumentMoniker": "UI\\Formularios\\CrearPacientes.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs",
+              "RelativeToolTip": "UI\\Formularios\\CrearPacientes.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T05:57:47.296Z",
+              "WhenOpened": "2025-06-09T07:32:31.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Ventana_modos.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana_modos.cs",
-              "RelativeDocumentMoniker": "UI\\Ventana_modos.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana_modos.cs",
-              "RelativeToolTip": "UI\\Ventana_modos.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADIAAAANAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "EditarConsultorios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Formularios\\EditarConsultorios.cs",
+              "RelativeDocumentMoniker": "UI\\Formularios\\EditarConsultorios.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Formularios\\EditarConsultorios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI\\Formularios\\EditarConsultorios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T05:28:55.443Z",
+              "WhenOpened": "2025-06-09T07:19:45.605Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CrearConsultorios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Formularios\\CrearConsultorios.cs",
+              "RelativeDocumentMoniker": "UI\\Formularios\\CrearConsultorios.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Formularios\\CrearConsultorios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI\\Formularios\\CrearConsultorios.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T07:19:23.934Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Clinica.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Clinica.cs",
+              "RelativeDocumentMoniker": "LogicadeNegocios\\Clinica.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\LogicadeNegocios\\Clinica.cs",
+              "RelativeToolTip": "LogicadeNegocios\\Clinica.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T07:01:18.513Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ventana principal.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana principal.cs",
-              "RelativeDocumentMoniker": "UI\\Ventana principal.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana principal.cs",
-              "RelativeToolTip": "UI\\Ventana principal.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAUwBcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Ventana simulacion.Designer.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana simulacion.Designer.cs",
+              "RelativeDocumentMoniker": "UI\\Ventana simulacion.Designer.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana simulacion.Designer.cs",
+              "RelativeToolTip": "UI\\Ventana simulacion.Designer.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T05:26:55.714Z",
+              "WhenOpened": "2025-06-09T06:42:19.886Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Ventana auto.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana auto.cs",
-              "RelativeDocumentMoniker": "UI\\Ventana auto.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana auto.cs",
-              "RelativeToolTip": "UI\\Ventana auto.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAzwBwAAAAAAAAAAAAAAA==",
+              "Title": "Ventana simulacion.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana simulacion.cs",
+              "RelativeDocumentMoniker": "UI\\Ventana simulacion.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana simulacion.cs",
+              "RelativeToolTip": "UI\\Ventana simulacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T05:24:07.164Z",
+              "WhenOpened": "2025-06-09T06:42:15.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
+              "Title": "Ventana principal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana principal.cs",
+              "RelativeDocumentMoniker": "UI\\Ventana principal.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana principal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI\\Ventana principal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T06:28:30.661Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Ventana principal.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana principal.cs",
+              "RelativeDocumentMoniker": "UI\\Ventana principal.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana principal.cs",
+              "RelativeToolTip": "UI\\Ventana principal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T06:24:51.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ventana_modos.Designer.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana_modos.Designer.cs",
+              "RelativeDocumentMoniker": "UI\\Ventana_modos.Designer.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana_modos.Designer.cs",
+              "RelativeToolTip": "UI\\Ventana_modos.Designer.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T06:24:35.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ventana_modos.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana_modos.cs",
+              "RelativeDocumentMoniker": "UI\\Ventana_modos.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana_modos.cs",
+              "RelativeToolTip": "UI\\Ventana_modos.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T06:24:31.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Ventana principal.Designer.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana principal.Designer.cs",
+              "RelativeDocumentMoniker": "UI\\Ventana principal.Designer.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana principal.Designer.cs",
+              "RelativeToolTip": "UI\\Ventana principal.Designer.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAYwGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T06:23:20.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Ventana simulacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana simulacion.cs",
+              "RelativeDocumentMoniker": "UI\\Ventana simulacion.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana simulacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI\\Ventana simulacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T06:21:39.629Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CrearPacientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs",
+              "RelativeDocumentMoniker": "UI\\Formularios\\CrearPacientes.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI\\Formularios\\CrearPacientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T06:21:11.777Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Ventana_modos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana_modos.cs",
               "RelativeDocumentMoniker": "UI\\Ventana_modos.cs",
               "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana_modos.cs [Dise\u00F1o]",
               "RelativeToolTip": "UI\\Ventana_modos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T05:21:29.126Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Ventana manual.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana manual.cs",
-              "RelativeDocumentMoniker": "UI\\Ventana manual.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana manual.cs",
-              "RelativeToolTip": "UI\\Ventana manual.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAgwE4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T05:06:04.669Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Ventana manual.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana manual.cs",
-              "RelativeDocumentMoniker": "UI\\Ventana manual.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana manual.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI\\Ventana manual.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T05:01:48.115Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Ventana auto.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana auto.cs",
-              "RelativeDocumentMoniker": "UI\\Ventana auto.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\EspereAqui\\UI\\Ventana auto.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI\\Ventana auto.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T05:01:45.164Z",
+              "WhenOpened": "2025-06-09T06:20:46.357Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

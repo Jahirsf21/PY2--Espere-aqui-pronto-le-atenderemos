@@ -70,6 +70,30 @@ namespace EspereAqui.LogicadeNegocios
             return mejor;
         }
 
+        public void Fitness()
+        {
+            /*
+                 Donde insertar a cada paciente de la cola de pacientes 
+                 Cruce de consultorios cuando se cierre una especialidad
+                 Cruce de consultorios cuando se cree o cierre un consultorio
+                 Si un paciente tiene una especialidad y no hay consultorios con dicha especialidad se regresa a la cola de espera y aumenta la prioridad
+                 Atender en orden de prioridad(alta) a los pacientes en la cola de espera.
+                 Revisar los consultorios abiertos y mandar a los paciente con prioridad alta a la cola del consultorio en la primera posición.
+                 No hay especialiadades en ningun consultorio
+                 Orden en que se van a pasar los paciente con el mismo nivel de prioridad.
+                 Definir maximo de personas en la fila por consultorio
+                 Tiempo de consulta (Tiempo de simulacion) en base a la especialidad o cantidad de especialidades del consultorio.
+                 5sg 5 minutos de simulación
+                 Tipos de cruces 
+                 Mutación de paciente (se cambie la especialidad lo mandan a una fila de consultorio cuya especialidad no es la misma
+
+                 
+                 
+                 
+                 
+             */
+        }
+
 
 
 
