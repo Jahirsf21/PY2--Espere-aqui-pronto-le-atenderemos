@@ -11,7 +11,7 @@ namespace EspereAqui.LogicadeNegocios
         public int TiempoConsulta { get; set; }
         public List<Especialidad> Especialidades {  get; set; }
         public List<Paciente> Pacientes { get; set; } //la fila
-        public Paciente pacienteActual;
+        public Paciente pacienteActual { get; set; }
         public bool Estado;
 
         public Consultorio() { 
@@ -37,7 +37,22 @@ namespace EspereAqui.LogicadeNegocios
             return this.Pacientes.Count;
         }
 
-        
+        public List<Paciente> OrdenarPacientesPorPrioridad()
+        {
+            return this.Pacientes.OrderByDescending(paciente => paciente.Prioridad).ToList();
+        }
+
+        public void AtenderPaciente()
+        {
+            if (Pacientes.Count != 0){
+                pacienteActual = OrdenarPacientesPorPrioridad()[0]; 
+                Pacientes.Remove(pacienteActual); //se puede cambiar por ordenar la fila por prioridad y atendiendo al primero
+            }
+            else{
+                pacienteActual = null; 
+            }
+        }
+
 
 
     }
