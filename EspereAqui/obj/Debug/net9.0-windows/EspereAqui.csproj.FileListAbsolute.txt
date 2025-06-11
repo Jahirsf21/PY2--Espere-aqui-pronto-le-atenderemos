@@ -1,0 +1,88 @@
+C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.exe
+C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.dll
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.Properties.Resources.resources
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_principal.resources
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_simulacion.resources
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_modos.resources
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.csproj.GenerateResource.cache
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.GeneratedMSBuildEditorConfig.editorconfig
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.AssemblyInfoInputs.cache
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.AssemblyInfo.cs
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.csproj.CoreCompileInputs.cache
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.sourcelink.json
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.dll
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\refint\EspereAqui.dll
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.pdb
+C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.deps.json
+C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.runtimeconfig.json
+C:\PROYECTOS\ANÁLISIS\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.pdb
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.genruntimeconfig.cache
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\ref\EspereAqui.dll
+C:\PROYECTOS\ANÁLISIS\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Formularios.CrearPacientes.resources
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.exe
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.deps.json
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.runtimeconfig.json
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.dll
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.pdb
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.Properties.Resources.resources
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Formularios.CrearConsultorios.resources
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Formularios.CrearPacientes.resources
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Formularios.EditarConsultorios.resources
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_principal.resources
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_simulacion.resources
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_modos.resources
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.csproj.GenerateResource.cache
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.AssemblyInfoInputs.cache
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.AssemblyInfo.cs
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.csproj.CoreCompileInputs.cache
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.sourcelink.json
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.dll
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\refint\EspereAqui.dll
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.pdb
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.genruntimeconfig.cache
+C:\Users\sermo\OneDrive - Estudiantes ITCR\TEC\2025\I Semestre\Ánalisis\Proyecto 2\PY2--Espere-aqui-pronto-le-atenderemos\EspereAqui\obj\Debug\net9.0-windows\ref\EspereAqui.dll
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.dll
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\refint\EspereAqui.dll
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.pdb
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.exe
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.deps.json
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.runtimeconfig.json
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.dll
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.pdb
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.Properties.Resources.resources
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Formularios.CrearConsultorios.resources
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Formularios.CrearPacientes.resources
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Formularios.EditarConsultorios.resources
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_principal.resources
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_simulacion.resources
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_modos.resources
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.csproj.GenerateResource.cache
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.AssemblyInfoInputs.cache
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.AssemblyInfo.cs
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.csproj.CoreCompileInputs.cache
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.genruntimeconfig.cache
+C:\Users\deisl\Downloads\EspereAqui\EspereAqui\obj\Debug\net9.0-windows\ref\EspereAqui.dll
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.exe
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.deps.json
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.runtimeconfig.json
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.dll
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\bin\Debug\net9.0-windows\EspereAqui.pdb
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.Properties.Resources.resources
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Formularios.CrearPacientes.resources
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_principal.resources
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_simulacion.resources
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Ventana_modos.resources
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.csproj.GenerateResource.cache
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.AssemblyInfoInputs.cache
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.AssemblyInfo.cs
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.csproj.CoreCompileInputs.cache
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.sourcelink.json
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.dll
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\refint\EspereAqui.dll
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.pdb
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.genruntimeconfig.cache
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\ref\EspereAqui.dll
+C:\Users\deisl\Source\Repos\version-corregida\EspereAqui\obj\Debug\net9.0-windows\EspereAqui.UI.Formularios.GestionarConsultorios.resources
