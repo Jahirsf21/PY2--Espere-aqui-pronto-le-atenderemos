@@ -1,20 +1,23 @@
 ﻿using EspereAqui.LogicadeNegocios;
 using System;
+using System.Collections.Generic; 
 using System.Drawing;
-using System.Linq;
+using System.Linq; 
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using EspereAqui.UI;
+
 
 namespace EspereAqui.UI.Formularios
 {
     public partial class CrearPacientes : Form
     {
         private Ventana_simulacion simulacion;
-        public CrearPacientes(Ventana_simulacion simulacion)
+        private Clinica clinica;
+
+        public CrearPacientes(Ventana_simulacion simulacion, Clinica clinica)
         {
             InitializeComponent();
             this.simulacion = simulacion;
+            this.clinica = clinica;
         }
 
         private void CrearPacientes_Load(object sender, EventArgs e)
@@ -32,10 +35,12 @@ namespace EspereAqui.UI.Formularios
 
         private void btnCrearPaciente_Click(object sender, EventArgs e)
         {
+
             string nombre = textBox2.Text.Trim();
             string apellido = textBox1.Text.Trim();
             string genero = comboBox3.Text;
-            string especialidadTexto = comboBox2.Text;
+
+            var especialidadesSeleccionadas = chkLstEspecialidades.CheckedItems.OfType<string>().ToList();
 
             if (string.IsNullOrWhiteSpace(nombre) || !nombre.All(char.IsLetter))
             {
@@ -54,35 +59,48 @@ namespace EspereAqui.UI.Formularios
                 MessageBox.Show("Seleccione un género.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            
 
-            if (string.IsNullOrWhiteSpace(especialidadTexto))
+            if (especialidadesSeleccionadas.Count == 0)
             {
-                MessageBox.Show("Seleccione una especialidad.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione al menos una especialidad.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (especialidadTexto == "Ginecología" && genero != "Mujer")
+            if (especialidadesSeleccionadas.Count > 2)
+            {
+                MessageBox.Show("Puede seleccionar un máximo de 2 especialidades.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            if (especialidadesSeleccionadas.Contains("Ginecología") && genero != "Mujer")
             {
                 MessageBox.Show("La especialidad de Ginecología solo aplica para pacientes de género femenino.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (especialidadTexto == "Urología" && genero != "Hombre")
+            if (especialidadesSeleccionadas.Contains("Urología") && genero != "Hombre")
             {
                 MessageBox.Show("La especialidad de Urología solo aplica para pacientes de género masculino.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Especialidad especialidad = new Especialidad(especialidadTexto);
-            Paciente paciente = new Paciente(nombre, apellido, genero, especialidad);
+            List<Especialidad> listaDeEspecialidades = especialidadesSeleccionadas.Select(nombreEsp => new Especialidad(nombreEsp)).ToList();
+
+            Paciente paciente = new Paciente(nombre, apellido, genero, listaDeEspecialidades);
+            
+            this.clinica.AgregarPacienteFila(paciente);
             richTextBox1.AppendText(paciente.ToString() + Environment.NewLine);
 
             MessageBox.Show("Paciente creado exitosamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             textBox2.Clear();
             textBox1.Clear();
-            comboBox2.SelectedIndex = -1;
             comboBox3.SelectedIndex = -1;
+            for (int i = 0; i < chkLstEspecialidades.Items.Count; i++)
+            {
+                chkLstEspecialidades.SetItemChecked(i, false);
+            }
         }
     }
 }

@@ -78,10 +78,8 @@ namespace EspereAqui.UI.Formularios
             nudHoras.Value = 0;
             nudMinutos.Value = 30;
             chkEstado.Checked = false;
-
-            // Habilita/deshabilita el botón de crear según el límite
             btnCrear.Enabled = clinica.Consultorios.Count < MAX_CONSULTORIOS;
-            btnEditar.Enabled = false; // Se habilita al seleccionar un consultorio
+            btnEditar.Enabled = false; 
             btnEliminar.Enabled = false;
         }
 

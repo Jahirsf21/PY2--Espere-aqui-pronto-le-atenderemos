@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deisl\\Source\\Repos\\version-corregida\\EspereAqui\\EspereAqui.csproj": {}
+    "C:\\PROYECTOS\\ANÁLISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\EspereAqui.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deisl\\Source\\Repos\\version-corregida\\EspereAqui\\EspereAqui.csproj": {
+    "C:\\PROYECTOS\\ANÁLISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\EspereAqui.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deisl\\Source\\Repos\\version-corregida\\EspereAqui\\EspereAqui.csproj",
+        "projectUniqueName": "C:\\PROYECTOS\\ANÁLISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\EspereAqui.csproj",
         "projectName": "EspereAqui",
-        "projectPath": "C:\\Users\\deisl\\Source\\Repos\\version-corregida\\EspereAqui\\EspereAqui.csproj",
+        "projectPath": "C:\\PROYECTOS\\ANÁLISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\EspereAqui.csproj",
         "packagesPath": "C:\\Users\\deisl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deisl\\Source\\Repos\\version-corregida\\EspereAqui\\obj\\",
+        "outputPath": "C:\\PROYECTOS\\ANÁLISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -22,14 +22,19 @@
             this.pnlBotonesGestion = new System.Windows.Forms.TableLayoutPanel();
             this.btnGestionarPacientes = new System.Windows.Forms.Label();
             this.btnGestionarConsultorios = new System.Windows.Forms.Label();
-            this.pnlConsultoriosContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlConsultoriosContainer = new System.Windows.Forms.Panel(); 
+            this.pnlFilaPacientes = new System.Windows.Forms.FlowLayoutPanel();
             this.toolTipInfo = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1.SuspendLayout();
             this.pnlBotonesGestion.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Controls.Add(this.pnlConsultoriosContainer);
+            this.pictureBox1.Controls.Add(this.pnlFilaPacientes);
+            this.pictureBox1.Controls.Add(this.pnlBotonesGestion);
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = Properties.Resources.fondo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -93,26 +98,35 @@
             this.pnlConsultoriosContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlConsultoriosContainer.Location = new System.Drawing.Point(0, 0);
             this.pnlConsultoriosContainer.Name = "pnlConsultoriosContainer";
-            this.pnlConsultoriosContainer.Padding = new System.Windows.Forms.Padding(20);
-            this.pnlConsultoriosContainer.Size = new System.Drawing.Size(900, 425);
+            this.pnlConsultoriosContainer.Size = new System.Drawing.Size(900, 305);
             this.pnlConsultoriosContainer.TabIndex = 2;
+            // 
+            // pnlFilaPacientes
+            // 
+            this.pnlFilaPacientes.AutoScroll = true;
+            this.pnlFilaPacientes.BackColor = System.Drawing.Color.Transparent;
+            this.pnlFilaPacientes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlFilaPacientes.Location = new System.Drawing.Point(0, 305);
+            this.pnlFilaPacientes.Name = "pnlFilaPacientes";
+            this.pnlFilaPacientes.Size = new System.Drawing.Size(900, 120);
+            this.pnlFilaPacientes.TabIndex = 3;
+            this.pnlFilaPacientes.WrapContents = false;
             // 
             // Ventana_simulacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 505);
-            this.Controls.Add(this.pnlConsultoriosContainer);
-            this.Controls.Add(this.pnlBotonesGestion);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Ventana_simulacion";
             this.Text = "Simulacion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Ventana_simulacion_Activated);
+            this.Load += new System.EventHandler(this.Ventana_simulacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pictureBox1.ResumeLayout(false);
             this.pnlBotonesGestion.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -121,7 +135,8 @@
         private System.Windows.Forms.TableLayoutPanel pnlBotonesGestion;
         private System.Windows.Forms.Label btnGestionarPacientes;
         private System.Windows.Forms.Label btnGestionarConsultorios;
-        private System.Windows.Forms.FlowLayoutPanel pnlConsultoriosContainer;
-        private ToolTip toolTipInfo;
+        private System.Windows.Forms.Panel pnlConsultoriosContainer;
+        private System.Windows.Forms.ToolTip toolTipInfo;
+        private System.Windows.Forms.FlowLayoutPanel pnlFilaPacientes;
     }
 }

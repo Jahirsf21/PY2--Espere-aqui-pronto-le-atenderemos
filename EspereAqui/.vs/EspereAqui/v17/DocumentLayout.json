@@ -1,77 +1,77 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\",
+  "WorkspaceRootPath": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\ventana simulacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\ventana simulacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana simulacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\ventana_modos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\ventana_modos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana_modos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\ventana_modos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\ventana_modos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana_modos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\ventana principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\ventana principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\ventana principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\ventana principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\formularios\\gestionarconsultarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\formularios\\gestionarconsultarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\gestionarconsultarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\formularios\\gestionarconsultarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\formularios\\gestionarconsultarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\gestionarconsultarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\formularios\\gestionarconsultarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\ui\\formularios\\gestionarconsultarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\gestionarconsultarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\formularios\\crearpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\formularios\\crearpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\crearpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\formularios\\crearpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\ui\\formularios\\crearpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\crearpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\ui\\formularios\\crearpacientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\formularios\\crearpacientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\formularios\\crearpacientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\logicadenegocios\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\logicadenegocios\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\logicadenegocios\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\logicadenegocios\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\logicadenegocios\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\logicadenegocios\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\logicadenegocios\\consultorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\logicadenegocios\\consultorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\consultorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\source\\repos\\version-corregida\\espereaqui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -96,11 +96,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Ventana simulacion.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana simulacion.Designer.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.Designer.cs",
               "RelativeDocumentMoniker": "UI\\Ventana simulacion.Designer.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana simulacion.Designer.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.Designer.cs",
               "RelativeToolTip": "UI\\Ventana simulacion.Designer.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAuwH8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T00:19:34.773Z",
               "EditorCaption": ""
@@ -109,74 +109,69 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Ventana simulacion.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana simulacion.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.cs",
               "RelativeDocumentMoniker": "UI\\Ventana simulacion.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana simulacion.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.cs",
               "RelativeToolTip": "UI\\Ventana simulacion.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAmwGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:19:10.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T00:19:10.589Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Ventana_modos.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana_modos.Designer.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana_modos.Designer.cs",
               "RelativeDocumentMoniker": "UI\\Ventana_modos.Designer.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana_modos.Designer.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana_modos.Designer.cs",
               "RelativeToolTip": "UI\\Ventana_modos.Designer.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAYwIMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:18:51.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T00:18:51.917Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Ventana_modos.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana_modos.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana_modos.cs",
               "RelativeDocumentMoniker": "UI\\Ventana_modos.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana_modos.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana_modos.cs",
               "RelativeToolTip": "UI\\Ventana_modos.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAQwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:18:24.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T00:18:24.164Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Ventana principal.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana principal.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana principal.cs",
               "RelativeDocumentMoniker": "UI\\Ventana principal.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana principal.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana principal.cs",
               "RelativeToolTip": "UI\\Ventana principal.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:17:57.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T00:17:57.685Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Ventana principal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana principal.Designer.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana principal.Designer.cs",
               "RelativeDocumentMoniker": "UI\\Ventana principal.Designer.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Ventana principal.Designer.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana principal.Designer.cs",
               "RelativeToolTip": "UI\\Ventana principal.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:17:34.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T00:17:34.58Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "GestionarConsultarios.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.cs",
               "RelativeDocumentMoniker": "UI\\Formularios\\GestionarConsultarios.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.cs",
               "RelativeToolTip": "UI\\Formularios\\GestionarConsultarios.cs",
               "ViewState": "AgIAAMYAAAAAAAAAAAAuwNIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -187,47 +182,44 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "GestionarConsultarios.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\Source\\Repos\\version-corregida\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.Designer.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.Designer.cs",
               "RelativeDocumentMoniker": "UI\\Formularios\\GestionarConsultarios.Designer.cs",
-              "ToolTip": "C:\\Users\\deisl\\Source\\Repos\\version-corregida\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.Designer.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.Designer.cs",
               "RelativeToolTip": "UI\\Formularios\\GestionarConsultarios.Designer.cs",
               "ViewState": "AgIAAIkBAAAAAAAAAAAuwKUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:16:26.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T00:16:26.471Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "GestionarConsultarios.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.cs",
               "RelativeDocumentMoniker": "UI\\Formularios\\GestionarConsultarios.cs",
               "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI\\Formularios\\GestionarConsultarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Formularios\\GestionarConsultarios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:16:07.556Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-06-11T00:16:07.556Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "CrearPacientes.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\Source\\Repos\\version-corregida\\EspereAqui\\UI\\Formularios\\CrearPacientes.Designer.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Formularios\\CrearPacientes.Designer.cs",
               "RelativeDocumentMoniker": "UI\\Formularios\\CrearPacientes.Designer.cs",
-              "ToolTip": "C:\\Users\\deisl\\Source\\Repos\\version-corregida\\EspereAqui\\UI\\Formularios\\CrearPacientes.Designer.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Formularios\\CrearPacientes.Designer.cs",
               "RelativeToolTip": "UI\\Formularios\\CrearPacientes.Designer.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAYwPEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:14:55.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T00:14:55.012Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "CrearPacientes.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs",
               "RelativeDocumentMoniker": "UI\\Formularios\\CrearPacientes.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs",
               "RelativeToolTip": "UI\\Formularios\\CrearPacientes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -238,90 +230,83 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "CrearPacientes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs",
               "RelativeDocumentMoniker": "UI\\Formularios\\CrearPacientes.cs",
               "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI\\Formularios\\CrearPacientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\UI\\Formularios\\CrearPacientes.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:06:52.408Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-06-11T00:06:52.408Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "Paciente.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\LogicadeNegocios\\Paciente.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\LogicadeNegocios\\Paciente.cs",
               "RelativeDocumentMoniker": "LogicadeNegocios\\Paciente.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\LogicadeNegocios\\Paciente.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\LogicadeNegocios\\Paciente.cs",
               "RelativeToolTip": "LogicadeNegocios\\Paciente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:05:42.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T00:05:42.778Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\Properties\\Resources.resx",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\Properties\\Resources.resx",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\Properties\\Resources.resx",
               "RelativeToolTip": "Properties\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-06-11T00:00:44.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T00:00:44.038Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\Program.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\Program.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T23:12:51.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T23:12:51.285Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "Consultorio.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\LogicadeNegocios\\Consultorio.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\LogicadeNegocios\\Consultorio.cs",
               "RelativeDocumentMoniker": "LogicadeNegocios\\Consultorio.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\LogicadeNegocios\\Consultorio.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\LogicadeNegocios\\Consultorio.cs",
               "RelativeToolTip": "LogicadeNegocios\\Consultorio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T17:04:53.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T17:04:53.233Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "Especialidad.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\LogicadeNegocios\\Especialidad.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\LogicadeNegocios\\Especialidad.cs",
               "RelativeDocumentMoniker": "LogicadeNegocios\\Especialidad.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\LogicadeNegocios\\Especialidad.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\LogicadeNegocios\\Especialidad.cs",
               "RelativeToolTip": "LogicadeNegocios\\Especialidad.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T17:04:51.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T17:04:51.741Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "Clinica.cs",
-              "DocumentMoniker": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\LogicadeNegocios\\Clinica.cs",
+              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\LogicadeNegocios\\Clinica.cs",
               "RelativeDocumentMoniker": "LogicadeNegocios\\Clinica.cs",
-              "ToolTip": "C:\\Users\\deisl\\source\\repos\\version-corregida\\EspereAqui\\LogicadeNegocios\\Clinica.cs",
+              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\LogicadeNegocios\\Clinica.cs",
               "RelativeToolTip": "LogicadeNegocios\\Clinica.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAIwCoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T16:20:30.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T16:20:30.021Z"
             }
           ]
         }
