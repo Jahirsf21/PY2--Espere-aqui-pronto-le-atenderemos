@@ -13,18 +13,21 @@ namespace EspereAqui.LogicadeNegocios
         public int TiempoConsulta { get; set; }
         public List<Especialidad> Especialidades {  get; set; }
         public List<Paciente> Pacientes { get; set; } //la fila
-        public Paciente pacienteActual { get; set; }
+        public Paciente? pacienteActual { get; set; }
         public bool Estado;
 
         public Consultorio() { 
             Id = nextId++;
             Especialidades = new List<Especialidad>();
             Pacientes = new List<Paciente>();
-            Estado= false;
+            pacienteActual = null;
+            Estado = false;
         }
 
-        public void AgregarEspecialidad(Especialidad especialidad) {
-            if (especialidad != null && !Especialidades.Contains(especialidad)) {
+        public void AgregarEspecialidad(Especialidad especialidad)
+        {
+            if (especialidad != null && !Especialidades.Contains(especialidad))
+            {
                 Especialidades.Add(especialidad);
             }
         }
@@ -33,7 +36,9 @@ namespace EspereAqui.LogicadeNegocios
             {
                 Pacientes.Add(paciente);
             }
+
         }
+
 
         public int ObtenerLongitudFila()
         {
@@ -45,16 +50,17 @@ namespace EspereAqui.LogicadeNegocios
             return this.Pacientes.OrderByDescending(paciente => paciente.Prioridad).ToList();
         }
 
-        public void AtenderPaciente()
+        public async void AtenderPaciente()
         {
             if (Pacientes.Count != 0){
-                pacienteActual = OrdenarPacientesPorPrioridad()[0]; 
-                Pacientes.Remove(pacienteActual); //se puede cambiar por ordenar la fila por prioridad y atendiendo al primero
+                Pacientes = this.OrdenarPacientesPorPrioridad();
+                pacienteActual = this.Pacientes[0];
+                Pacientes.Remove(pacienteActual);
+                await Task.Delay(1000 * this.TiempoConsulta / 10);
             }
-            else{
-                pacienteActual = null; 
-            }
+                pacienteActual = null;
         }
+
 
         public override string ToString()
         {
