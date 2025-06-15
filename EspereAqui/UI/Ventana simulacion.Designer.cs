@@ -17,7 +17,9 @@ namespace EspereAqui.UI
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlFondo = new System.Windows.Forms.Panel();
+            this.lblCronometro = new System.Windows.Forms.Label();
             this.pnlContenido = new System.Windows.Forms.TableLayoutPanel();
             this.pnlConsultoriosContainer = new System.Windows.Forms.Panel();
             this.pnlFilaPacientes = new System.Windows.Forms.FlowLayoutPanel();
@@ -31,6 +33,7 @@ namespace EspereAqui.UI
             this.btnSalir = new System.Windows.Forms.Button();
             this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.simulacionTimer = new System.Windows.Forms.Timer(this.components);
             this.pnlFondo.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             this.pnlBotones.SuspendLayout();
@@ -40,12 +43,25 @@ namespace EspereAqui.UI
             // 
             this.pnlFondo.BackgroundImage = Properties.Resources.fondo;
             this.pnlFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlFondo.Controls.Add(this.lblCronometro);
             this.pnlFondo.Controls.Add(this.pnlContenido);
             this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFondo.Location = new System.Drawing.Point(0, 0);
             this.pnlFondo.Name = "pnlFondo";
             this.pnlFondo.Size = new System.Drawing.Size(1370, 749);
             this.pnlFondo.TabIndex = 0;
+            // 
+            // lblCronometro
+            // 
+            this.lblCronometro.AutoSize = true;
+            this.lblCronometro.BackColor = System.Drawing.Color.Transparent;
+            this.lblCronometro.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblCronometro.ForeColor = System.Drawing.Color.White;
+            this.lblCronometro.Location = new System.Drawing.Point(23, 9);
+            this.lblCronometro.Name = "lblCronometro";
+            this.lblCronometro.Size = new System.Drawing.Size(288, 37);
+            this.lblCronometro.TabIndex = 1;
+            this.lblCronometro.Text = "Tiempo: Día 1 - 00:00";
             // 
             // pnlContenido
             // 
@@ -59,11 +75,11 @@ namespace EspereAqui.UI
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 0);
             this.pnlContenido.Name = "pnlContenido";
-            this.pnlContenido.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlContenido.Padding = new System.Windows.Forms.Padding(20, 50, 20, 20);
             this.pnlContenido.RowCount = 4;
-            this.pnlContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.pnlContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.pnlContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.pnlContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.pnlContenido.Size = new System.Drawing.Size(1370, 749);
             this.pnlContenido.TabIndex = 0;
@@ -72,16 +88,16 @@ namespace EspereAqui.UI
             // 
             this.pnlConsultoriosContainer.AutoScroll = true;
             this.pnlConsultoriosContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlConsultoriosContainer.Location = new System.Drawing.Point(23, 23);
+            this.pnlConsultoriosContainer.Location = new System.Drawing.Point(23, 53);
             this.pnlConsultoriosContainer.Name = "pnlConsultoriosContainer";
-            this.pnlConsultoriosContainer.Size = new System.Drawing.Size(1324, 248);
+            this.pnlConsultoriosContainer.Size = new System.Drawing.Size(1324, 399);
             this.pnlConsultoriosContainer.TabIndex = 0;
             // 
             // pnlFilaPacientes
             // 
             this.pnlFilaPacientes.AutoScroll = true;
             this.pnlFilaPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFilaPacientes.Location = new System.Drawing.Point(23, 277);
+            this.pnlFilaPacientes.Location = new System.Drawing.Point(23, 458);
             this.pnlFilaPacientes.Name = "pnlFilaPacientes";
             this.pnlFilaPacientes.Size = new System.Drawing.Size(1324, 144);
             this.pnlFilaPacientes.TabIndex = 1;
@@ -204,16 +220,21 @@ namespace EspereAqui.UI
             this.rtbLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbLog.Font = new System.Drawing.Font("Consolas", 9F);
             this.rtbLog.ForeColor = System.Drawing.Color.Gainsboro;
-            this.rtbLog.Location = new System.Drawing.Point(23, 427);
+            this.rtbLog.Location = new System.Drawing.Point(23, 608);
             this.rtbLog.Name = "rtbLog";
             this.rtbLog.ReadOnly = true;
-            this.rtbLog.Size = new System.Drawing.Size(1324, 228);
+            this.rtbLog.Size = new System.Drawing.Size(1324, 47);
             this.rtbLog.TabIndex = 3;
             this.rtbLog.Text = "";
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // simulacionTimer
+            // 
+            this.simulacionTimer.Interval = 1000;
+            this.simulacionTimer.Tick += new System.EventHandler(this.simulacionTimer_Tick);
             // 
             // Ventana_simulacion
             // 
@@ -226,9 +247,11 @@ namespace EspereAqui.UI
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Ventana_simulacion_Load);
             this.pnlFondo.ResumeLayout(false);
+            this.pnlFondo.PerformLayout();
             this.pnlContenido.ResumeLayout(false);
             this.pnlBotones.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -247,5 +270,7 @@ namespace EspereAqui.UI
         private System.Windows.Forms.Button btnEmpezarGenetico;
         private System.Windows.Forms.Button btnPausar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label lblCronometro;
+        private System.Windows.Forms.Timer simulacionTimer;
     }
 }

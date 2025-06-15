@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading;
 using EspereAqui.LogicadeNegocios.EstructurasJson;
+using EspereAqui.UI;
 
 namespace EspereAqui.LogicadeNegocios
 {
@@ -16,6 +17,8 @@ namespace EspereAqui.LogicadeNegocios
         public Action<string> Logger { get; set; }
         private ManualResetEventSlim _pauseEvent = new ManualResetEventSlim(true);
         public CancellationTokenSource _fitnessCancellationTokenSource;
+
+        public Action OnSimulationFinished { get; set; }
         
         public Clinica()
         {
@@ -82,13 +85,14 @@ namespace EspereAqui.LogicadeNegocios
                     paciente.Prioridad++;
                     Logger?.Invoke($"ESPERA: No hay consultorio para {paciente.Nombre} ({especialidadActual.nombre}). Prioridad aumentada a {paciente.Prioridad}.");
                 }
-                
+
             }
             else
             {
                 consultorio.AgregarPacienteFila(paciente);
                 this.FilaClinica.Remove(paciente);
                 Logger?.Invoke($"ASIGNADO: Paciente {paciente.Nombre} puesto en fila de C-{consultorio.Id} para {especialidadActual.nombre}.");
+                
             }
         }
 
@@ -202,13 +206,13 @@ namespace EspereAqui.LogicadeNegocios
             Especialidades.Clear();
             CargarEspecialidadesPorDefecto();
         }
-
-        public void IniciarFitness(Action onUIRefresh)
+        
+        public void IniciarFitness(Action onUIRefresh, Action onSimulationFinishedCallback)
         {
             _fitnessCancellationTokenSource = new CancellationTokenSource();
+            this.OnSimulationFinished = onSimulationFinishedCallback;
             Fitness(onUIRefresh, _fitnessCancellationTokenSource.Token);
         }
-
         public void Fitness(Action onUIRefresh, CancellationToken cancellationToken)
         {
             Action<Paciente> manejarPacienteAtendido = (paciente) =>
@@ -236,7 +240,7 @@ namespace EspereAqui.LogicadeNegocios
                     {
                         _pauseEvent.Wait(cancellationToken);
                         if (cancellationToken.IsCancellationRequested) break;
-                        
+
                         if (this.FilaClinica.Any())
                         {
                             Paciente pacienteAAsignar;
@@ -251,6 +255,16 @@ namespace EspereAqui.LogicadeNegocios
                                 this.AgregarPacienteAFilaConsultorio(pacienteAAsignar);
                             }
                         }
+
+                        bool noHayPacientesEnFilaGeneral = !this.FilaClinica.Any();
+                        bool ningunConsultorioOcupado = !this.Consultorios.Any(c => c.pacienteActual != null || c.Pacientes.Any());
+
+                        if (noHayPacientesEnFilaGeneral && ningunConsultorioOcupado)
+                        {
+                            Logger?.Invoke("SISTEMA: ¡Todos los pacientes han sido atendidos! La simulación ha finalizado.");
+                            OnSimulationFinished?.Invoke(); 
+                            break;
+                        }
                         Thread.Sleep(500);
                     }
                     catch (OperationCanceledException)
@@ -260,6 +274,7 @@ namespace EspereAqui.LogicadeNegocios
                 }
             }).Start();
 
+            // Hilo que procesa la atención en cada consultorio
             new Thread(() =>
             {
                 Thread.CurrentThread.IsBackground = true;
@@ -269,16 +284,16 @@ namespace EspereAqui.LogicadeNegocios
                     {
                         _pauseEvent.Wait(cancellationToken);
                         if (cancellationToken.IsCancellationRequested) break;
-                        
+
                         var consultoriosActuales = this.Consultorios.ToList();
                         foreach (Consultorio cons in consultoriosActuales)
                         {
                             if (cancellationToken.IsCancellationRequested) break;
-                            
-                            Thread.Sleep(2000);
+
+                            Thread.Sleep(2000); 
                             cons.AtenderPaciente(manejarPacienteAtendido, this.Logger);
                         }
-                        Thread.Sleep(2000);
+                        Thread.Sleep(2000); 
                     }
                     catch (OperationCanceledException)
                     {
@@ -287,7 +302,6 @@ namespace EspereAqui.LogicadeNegocios
                 }
             }).Start();
         }
-
 
         public void CargarDatosDesdeJson(string rutaArchivo)
         {

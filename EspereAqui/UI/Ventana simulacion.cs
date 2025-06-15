@@ -17,6 +17,9 @@ namespace EspereAqui.UI
         private CrearPacientes formCrearPacientes;
         private GestionarConsultorios formGestionarConsultorios;
 
+        // Variable para llevar la cuenta del tiempo
+        private int minutosSimuladosTranscurridos = 0;
+
         public Ventana_simulacion(Ventana_modos modos, Clinica clinica, string modo)
         {
             InitializeComponent();
@@ -53,7 +56,7 @@ namespace EspereAqui.UI
             ActualizarFilaPacientes();
         }
 
-         private void ActualizarVistaConsultorios()
+        private void ActualizarVistaConsultorios()
         {
             pnlConsultoriosContainer.SuspendLayout();
             pnlConsultoriosContainer.Controls.Clear();
@@ -75,13 +78,15 @@ namespace EspereAqui.UI
                     BorderStyle = BorderStyle.FixedSingle,
                     Tag = consultorio
                 };
+                Color pictureBoxBackgroundColor = consultorio.pacienteActual != null ? Color.FromArgb(120, 10, 140, 10) : Color.Transparent;     
 
                 PictureBox picConsultorio = new PictureBox
                 {
                     Image = Properties.Resources.consultorio,
                     SizeMode = PictureBoxSizeMode.Zoom,
                     Dock = DockStyle.Top,
-                    Height = 50
+                    Height = 50,
+                    BackColor = pictureBoxBackgroundColor
                 };
 
                 Label lblIdConsultorio = new Label
@@ -93,17 +98,17 @@ namespace EspereAqui.UI
                     Height = 25,
                     TextAlign = ContentAlignment.MiddleCenter
                 };
-            
+
 
                 string especialidadesConsultorioStr = string.Join("\n", consultorio.Especialidades.Select(e => e.nombre));
                 Label lblEspecialidadesConsultorio = new Label
                 {
                     Text = especialidadesConsultorioStr,
-                    Font = new Font("Segoe UI", 6.5F, FontStyle.Italic), 
+                    Font = new Font("Segoe UI", 6.5F, FontStyle.Italic),
                     ForeColor = Color.Cyan,
                     Dock = DockStyle.Top,
-                    AutoSize = true, 
-                    MaximumSize = new Size(consultorioAncho, 0), 
+                    AutoSize = true,
+                    MaximumSize = new Size(consultorioAncho, 0),
                     TextAlign = ContentAlignment.MiddleCenter
                 };
 
@@ -122,7 +127,6 @@ namespace EspereAqui.UI
                 panelTarjetaConsultorio.Controls.Add(lblIdConsultorio);
                 panelTarjetaConsultorio.Controls.Add(picConsultorio);
 
-                
                 foreach (var paciente in consultorio.Pacientes)
                 {
                     Panel pacienteMiniPanel = new Panel
@@ -174,7 +178,7 @@ namespace EspereAqui.UI
                 tipConsultorio.SetToolTip(panelTarjetaConsultorio, infoToolTip);
                 tipConsultorio.SetToolTip(picConsultorio, infoToolTip);
                 tipConsultorio.SetToolTip(lblIdConsultorio, infoToolTip);
-                
+
                 pnlConsultoriosContainer.Controls.Add(panelTarjetaConsultorio);
                 posX += consultorioAncho + margen;
             }
@@ -256,6 +260,31 @@ namespace EspereAqui.UI
             btnCargarDatos.Enabled = false;
             btnPausar.Enabled = true;
             btnEmpezarGenetico.Enabled = true;
+            
+            minutosSimuladosTranscurridos = 0;
+            lblCronometro.Text = "Tiempo: Día 1 - 00:00";
+            simulacionTimer.Start();
+
+            ActualizarVistasCompletas();
+        }
+
+        private void FinalizarSimulacion()
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(FinalizarSimulacion));
+                return;
+            }
+
+            simulacionTimer.Stop(); 
+            
+            btnPausar.Enabled = false;
+            btnEmpezarGenetico.Enabled = false;
+            btnEmpezarAlgoritmo.Enabled = true;
+            btnCargarDatos.Enabled = true; 
+            btnEmpezarAlgoritmo.Text = "Empezar Simulación";
+            _isPaused = false;
+            btnPausar.Text = "Pausar";
         }
 
         private void btnCargarDatos_Click(object sender, EventArgs e)
@@ -293,10 +322,13 @@ namespace EspereAqui.UI
 
         private void btnEmpezarAlgoritmo_Click(object sender, EventArgs e)
         {
-            if (clinica.Consultorios.Count() != 0 && clinica.FilaClinica.Count() != 0)
+            if (clinica.Consultorios.Any() && clinica.FilaClinica.Any())
             {
                 Action callbackActualizarUI = () => ActualizarVistasCompletas();
-                this.clinica.IniciarFitness(callbackActualizarUI);
+                Action callbackFinSimulacion = () => FinalizarSimulacion();
+
+                this.clinica.IniciarFitness(callbackActualizarUI, callbackFinSimulacion); 
+
                 IniciarSimulacion();
                 btnEmpezarAlgoritmo.Text = "Simulación en Curso...";
                 LogMessage("Simulación estándar iniciada...");   
@@ -308,6 +340,7 @@ namespace EspereAqui.UI
         private void btnEmpezarGenetico_Click(object sender, EventArgs e)
         {
             clinica.Genetico();
+            ActualizarVistasCompletas();
         }
 
         private void btnPausar_Click(object sender, EventArgs e)
@@ -315,28 +348,47 @@ namespace EspereAqui.UI
             if (!_isPaused)
             {
                 clinica.PausarSimulacion();
+                simulacionTimer.Stop();
                 btnPausar.Text = "Reanudar";
                 btnEmpezarGenetico.Enabled = false;
             }
             else
             {
                 clinica.ReanudarSimulacion();
+                simulacionTimer.Start();
                 btnPausar.Text = "Pausar";
                 btnEmpezarGenetico.Enabled = true;
             }
             _isPaused = !_isPaused;
+            ActualizarVistasCompletas();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            simulacionTimer.Stop();
             clinica.DetenerTodosLosProcesos();
             this.modos.Show();
             this.Close();
         }
+
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
+            simulacionTimer.Stop();
             clinica.DetenerTodosLosProcesos();
             base.OnFormClosing(e);
+        }
+
+        private void simulacionTimer_Tick(object sender, EventArgs e)
+        {
+            minutosSimuladosTranscurridos += 5;
+
+            int totalMinutosEnUnDia = 24 * 60;
+            int dias = (minutosSimuladosTranscurridos / totalMinutosEnUnDia) + 1;
+            int minutosDelDiaActual = minutosSimuladosTranscurridos % totalMinutosEnUnDia;
+            int horas = minutosDelDiaActual / 60;
+            int minutos = minutosDelDiaActual % 60;
+
+            lblCronometro.Text = $"Tiempo: Día {dias} - {horas:D2}:{minutos:D2}";
         }
     }
 }

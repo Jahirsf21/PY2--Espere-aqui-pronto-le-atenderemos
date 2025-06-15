@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\",
+  "WorkspaceRootPath": "C:\\Users\\deisl\\OneDrive\\Escritorio\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\proyectos\\an\u00E1lisis\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\onedrive\\escritorio\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\onedrive\\escritorio\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\logicadenegocios\\consultorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:logicadenegocios\\consultorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|c:\\users\\deisl\\onedrive\\escritorio\\py2--espere-aqui-pronto-le-atenderemos\\espereaqui\\ui\\ventana simulacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana simulacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|C:\\Users\\deisl\\OneDrive\\Escritorio\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ECAFD174-5306-413F-9340-BC678FDE9103}|EspereAqui.csproj|solutionrelative:ui\\ventana simulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,8 +26,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 673,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ventana simulacion.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\deisl\\OneDrive\\Escritorio\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.Designer.cs",
+              "RelativeDocumentMoniker": "UI\\Ventana simulacion.Designer.cs",
+              "ToolTip": "C:\\Users\\deisl\\OneDrive\\Escritorio\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.Designer.cs",
+              "RelativeToolTip": "UI\\Ventana simulacion.Designer.cs",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAqwAABAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T23:00:44.957Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Consultorio.cs",
+              "DocumentMoniker": "C:\\Users\\deisl\\OneDrive\\Escritorio\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\LogicadeNegocios\\Consultorio.cs",
+              "RelativeDocumentMoniker": "LogicadeNegocios\\Consultorio.cs",
+              "ToolTip": "C:\\Users\\deisl\\OneDrive\\Escritorio\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\LogicadeNegocios\\Consultorio.cs",
+              "RelativeToolTip": "LogicadeNegocios\\Consultorio.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAmwIMAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T23:27:03.335Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
@@ -32,25 +67,26 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Ventana simulacion.cs",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.cs",
+              "DocumentMoniker": "C:\\Users\\deisl\\OneDrive\\Escritorio\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.cs",
               "RelativeDocumentMoniker": "UI\\Ventana simulacion.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.cs",
-              "RelativeToolTip": "UI\\Ventana simulacion.cs",
-              "ViewState": "AgIAAL8AAAAAAAAAAADgv9MAAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\deisl\\OneDrive\\Escritorio\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.cs*",
+              "RelativeToolTip": "UI\\Ventana simulacion.cs*",
+              "ViewState": "AgIAADwAAAAAAAAAAAAqwEwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T23:32:13.633Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Ventana simulacion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.cs",
+              "DocumentMoniker": "C:\\Users\\deisl\\OneDrive\\Escritorio\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.cs",
               "RelativeDocumentMoniker": "UI\\Ventana simulacion.cs",
-              "ToolTip": "C:\\PROYECTOS\\AN\u00C1LISIS\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI\\Ventana simulacion.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\deisl\\OneDrive\\Escritorio\\PY2--Espere-aqui-pronto-le-atenderemos\\EspereAqui\\UI\\Ventana simulacion.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "UI\\Ventana simulacion.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T23:28:49.215Z"
+              "WhenOpened": "2025-06-14T23:28:49.215Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
