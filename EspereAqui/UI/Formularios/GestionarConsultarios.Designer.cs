@@ -17,289 +17,304 @@
 
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            mainTableLayoutPanel = new TableLayoutPanel();
-            inputTableLayoutPanel = new TableLayoutPanel();
-            lblConsultorio = new Label();
-            cmbConsultorios = new ComboBox();
-            pnlEspecialidades = new TableLayoutPanel();
-            cmbEspecialidad = new ComboBox();
-            btnAnadirEspecialidad = new Button();
-            lblEspecialidad = new Label();
-            lstEspecialidadesAgregadas = new ListBox();
-            chkEstado = new CheckBox();
-            btnCrear = new Label();
-            btnEditar = new Label();
-            btnEliminar = new Label();
-            btnLimpiar = new Label();
-            btnRegresar = new Label();
-            rtbInfoConsultorios = new RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            mainTableLayoutPanel.SuspendLayout();
-            inputTableLayoutPanel.SuspendLayout();
-            pnlEspecialidades.SuspendLayout();
-            SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mainTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.inputTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.lblConsultorio = new System.Windows.Forms.Label();
+            this.cmbConsultorios = new System.Windows.Forms.ComboBox();
+            this.pnlEspecialidades = new System.Windows.Forms.TableLayoutPanel();
+            this.cmbEspecialidad = new System.Windows.Forms.ComboBox();
+            this.btnAnadirEspecialidad = new System.Windows.Forms.Button();
+            this.lblEspecialidad = new System.Windows.Forms.Label();
+            this.lstEspecialidadesAgregadas = new System.Windows.Forms.ListBox();
+            this.btnQuitarEspecialidad = new System.Windows.Forms.Button();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
+            this.btnCrear = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Label();
+            this.btnRegresar = new System.Windows.Forms.Label();
+            this.rtbInfoConsultorios = new System.Windows.Forms.RichTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.mainTableLayoutPanel.SuspendLayout();
+            this.inputTableLayoutPanel.SuspendLayout();
+            this.pnlEspecialidades.SuspendLayout();
+            this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.fondo;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(932, 553);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 13;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = Properties.Resources.fondo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(932, 553);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // mainTableLayoutPanel
             // 
-            mainTableLayoutPanel.BackColor = Color.Transparent;
-            mainTableLayoutPanel.ColumnCount = 2;
-            mainTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
-            mainTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
-            mainTableLayoutPanel.Controls.Add(inputTableLayoutPanel, 0, 0);
-            mainTableLayoutPanel.Controls.Add(rtbInfoConsultorios, 1, 0);
-            mainTableLayoutPanel.Dock = DockStyle.Fill;
-            mainTableLayoutPanel.Location = new Point(0, 0);
-            mainTableLayoutPanel.Name = "mainTableLayoutPanel";
-            mainTableLayoutPanel.Padding = new Padding(20);
-            mainTableLayoutPanel.RowCount = 1;
-            mainTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            mainTableLayoutPanel.Size = new Size(932, 553);
-            mainTableLayoutPanel.TabIndex = 14;
+            this.mainTableLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            this.mainTableLayoutPanel.ColumnCount = 2;
+            this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.mainTableLayoutPanel.Controls.Add(this.inputTableLayoutPanel, 0, 0);
+            this.mainTableLayoutPanel.Controls.Add(this.rtbInfoConsultorios, 1, 0);
+            this.mainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainTableLayoutPanel.Name = "mainTableLayoutPanel";
+            this.mainTableLayoutPanel.Padding = new System.Windows.Forms.Padding(20);
+            this.mainTableLayoutPanel.RowCount = 1;
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.mainTableLayoutPanel.Size = new System.Drawing.Size(932, 553);
+            this.mainTableLayoutPanel.TabIndex = 14;
             // 
             // inputTableLayoutPanel
             // 
-            inputTableLayoutPanel.ColumnCount = 1;
-            inputTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            inputTableLayoutPanel.Controls.Add(lblConsultorio, 0, 0);
-            inputTableLayoutPanel.Controls.Add(cmbConsultorios, 0, 1);
-            inputTableLayoutPanel.Controls.Add(lblEspecialidad, 0, 2);
-            inputTableLayoutPanel.Controls.Add(pnlEspecialidades, 0, 3);
-            inputTableLayoutPanel.Controls.Add(lstEspecialidadesAgregadas, 0, 4);
-            inputTableLayoutPanel.Controls.Add(chkEstado, 0, 5);
-            inputTableLayoutPanel.Controls.Add(btnCrear, 0, 6);
-            inputTableLayoutPanel.Controls.Add(btnEditar, 0, 7);
-            inputTableLayoutPanel.Controls.Add(btnEliminar, 0, 8);
-            inputTableLayoutPanel.Controls.Add(btnLimpiar, 0, 9);
-            inputTableLayoutPanel.Controls.Add(btnRegresar, 0, 10);
-            inputTableLayoutPanel.Dock = DockStyle.Fill;
-            inputTableLayoutPanel.Location = new Point(23, 23);
-            inputTableLayoutPanel.Name = "inputTableLayoutPanel";
-            inputTableLayoutPanel.RowCount = 12;
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle());
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle());
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle());
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle());
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 120F));
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            inputTableLayoutPanel.Size = new Size(350, 507);
-            inputTableLayoutPanel.TabIndex = 0;
+            this.inputTableLayoutPanel.ColumnCount = 1;
+            this.inputTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.inputTableLayoutPanel.Controls.Add(this.lblConsultorio, 0, 0);
+            this.inputTableLayoutPanel.Controls.Add(this.cmbConsultorios, 0, 1);
+            this.inputTableLayoutPanel.Controls.Add(this.lblEspecialidad, 0, 2);
+            this.inputTableLayoutPanel.Controls.Add(this.pnlEspecialidades, 0, 3);
+            this.inputTableLayoutPanel.Controls.Add(this.lstEspecialidadesAgregadas, 0, 4);
+            this.inputTableLayoutPanel.Controls.Add(this.btnQuitarEspecialidad, 0, 5);
+            this.inputTableLayoutPanel.Controls.Add(this.chkEstado, 0, 6);
+            this.inputTableLayoutPanel.Controls.Add(this.btnCrear, 0, 7);
+            this.inputTableLayoutPanel.Controls.Add(this.btnEditar, 0, 8);
+            this.inputTableLayoutPanel.Controls.Add(this.btnEliminar, 0, 9);
+            this.inputTableLayoutPanel.Controls.Add(this.btnLimpiar, 0, 10);
+            this.inputTableLayoutPanel.Controls.Add(this.btnRegresar, 0, 11);
+            this.inputTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inputTableLayoutPanel.Location = new System.Drawing.Point(23, 23);
+            this.inputTableLayoutPanel.Name = "inputTableLayoutPanel";
+            this.inputTableLayoutPanel.RowCount = 13;
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.inputTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.inputTableLayoutPanel.Size = new System.Drawing.Size(350, 507);
+            this.inputTableLayoutPanel.TabIndex = 0;
             // 
             // lblConsultorio
             // 
-            lblConsultorio.AutoSize = true;
-            lblConsultorio.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblConsultorio.ForeColor = Color.White;
-            lblConsultorio.Location = new Point(3, 10);
-            lblConsultorio.Margin = new Padding(3, 10, 3, 0);
-            lblConsultorio.Name = "lblConsultorio";
-            lblConsultorio.Size = new Size(264, 20);
-            lblConsultorio.TabIndex = 0;
-            lblConsultorio.Text = "Seleccionar Consultorio (para editar)";
+            this.lblConsultorio.AutoSize = true;
+            this.lblConsultorio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblConsultorio.ForeColor = System.Drawing.Color.White;
+            this.lblConsultorio.Location = new System.Drawing.Point(3, 10);
+            this.lblConsultorio.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            this.lblConsultorio.Name = "lblConsultorio";
+            this.lblConsultorio.Size = new System.Drawing.Size(264, 20);
+            this.lblConsultorio.TabIndex = 0;
+            this.lblConsultorio.Text = "Seleccionar Consultorio (para editar)";
             // 
             // cmbConsultorios
             // 
-            cmbConsultorios.Dock = DockStyle.Fill;
-            cmbConsultorios.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbConsultorios.FormattingEnabled = true;
-            cmbConsultorios.Location = new Point(3, 33);
-            cmbConsultorios.Name = "cmbConsultorios";
-            cmbConsultorios.Size = new Size(344, 28);
-            cmbConsultorios.TabIndex = 1;
-            cmbConsultorios.SelectedIndexChanged += cmbConsultorios_SelectedIndexChanged;
+            this.cmbConsultorios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbConsultorios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbConsultorios.FormattingEnabled = true;
+            this.cmbConsultorios.Location = new System.Drawing.Point(3, 33);
+            this.cmbConsultorios.Name = "cmbConsultorios";
+            this.cmbConsultorios.Size = new System.Drawing.Size(344, 28);
+            this.cmbConsultorios.TabIndex = 1;
+            this.cmbConsultorios.SelectedIndexChanged += new System.EventHandler(this.cmbConsultorios_SelectedIndexChanged);
             // 
             // pnlEspecialidades
             // 
-            pnlEspecialidades.ColumnCount = 2;
-            pnlEspecialidades.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
-            pnlEspecialidades.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
-            pnlEspecialidades.Controls.Add(cmbEspecialidad, 0, 0);
-            pnlEspecialidades.Controls.Add(btnAnadirEspecialidad, 1, 0);
-            pnlEspecialidades.Dock = DockStyle.Fill;
-            pnlEspecialidades.Location = new Point(0, 84);
-            pnlEspecialidades.Margin = new Padding(0);
-            pnlEspecialidades.Name = "pnlEspecialidades";
-            pnlEspecialidades.RowCount = 1;
-            pnlEspecialidades.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            pnlEspecialidades.Size = new Size(350, 34);
-            pnlEspecialidades.TabIndex = 2;
+            this.pnlEspecialidades.ColumnCount = 2;
+            this.pnlEspecialidades.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.pnlEspecialidades.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.pnlEspecialidades.Controls.Add(this.cmbEspecialidad, 0, 0);
+            this.pnlEspecialidades.Controls.Add(this.btnAnadirEspecialidad, 1, 0);
+            this.pnlEspecialidades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlEspecialidades.Location = new System.Drawing.Point(0, 84);
+            this.pnlEspecialidades.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlEspecialidades.Name = "pnlEspecialidades";
+            this.pnlEspecialidades.RowCount = 1;
+            this.pnlEspecialidades.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnlEspecialidades.Size = new System.Drawing.Size(350, 34);
+            this.pnlEspecialidades.TabIndex = 2;
             // 
             // cmbEspecialidad
             // 
-            cmbEspecialidad.Dock = DockStyle.Fill;
-            cmbEspecialidad.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbEspecialidad.FormattingEnabled = true;
-            cmbEspecialidad.Location = new Point(3, 3);
-            cmbEspecialidad.Name = "cmbEspecialidad";
-            cmbEspecialidad.Size = new Size(239, 28);
-            cmbEspecialidad.TabIndex = 0;
+            this.cmbEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEspecialidad.FormattingEnabled = true;
+            this.cmbEspecialidad.Location = new System.Drawing.Point(3, 3);
+            this.cmbEspecialidad.Name = "cmbEspecialidad";
+            this.cmbEspecialidad.Size = new System.Drawing.Size(239, 28);
+            this.cmbEspecialidad.TabIndex = 0;
             // 
             // btnAnadirEspecialidad
             // 
-            btnAnadirEspecialidad.Dock = DockStyle.Fill;
-            btnAnadirEspecialidad.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnAnadirEspecialidad.Location = new Point(248, 3);
-            btnAnadirEspecialidad.Name = "btnAnadirEspecialidad";
-            btnAnadirEspecialidad.Size = new Size(99, 28);
-            btnAnadirEspecialidad.TabIndex = 1;
-            btnAnadirEspecialidad.Text = "Añadir";
-            btnAnadirEspecialidad.UseVisualStyleBackColor = true;
-            btnAnadirEspecialidad.Click += btnAnadirEspecialidad_Click;
+            this.btnAnadirEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAnadirEspecialidad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAnadirEspecialidad.Location = new System.Drawing.Point(248, 3);
+            this.btnAnadirEspecialidad.Name = "btnAnadirEspecialidad";
+            this.btnAnadirEspecialidad.Size = new System.Drawing.Size(99, 28);
+            this.btnAnadirEspecialidad.TabIndex = 1;
+            this.btnAnadirEspecialidad.Text = "Añadir";
+            this.btnAnadirEspecialidad.UseVisualStyleBackColor = true;
+            this.btnAnadirEspecialidad.Click += new System.EventHandler(this.btnAnadirEspecialidad_Click);
             // 
             // lblEspecialidad
             // 
-            lblEspecialidad.AutoSize = true;
-            lblEspecialidad.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblEspecialidad.ForeColor = Color.White;
-            lblEspecialidad.Location = new Point(3, 64);
-            lblEspecialidad.Name = "lblEspecialidad";
-            lblEspecialidad.Size = new Size(172, 20);
-            lblEspecialidad.TabIndex = 3;
-            lblEspecialidad.Text = "Especialidades (Máx. 5)";
+            this.lblEspecialidad.AutoSize = true;
+            this.lblEspecialidad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblEspecialidad.ForeColor = System.Drawing.Color.White;
+            this.lblEspecialidad.Location = new System.Drawing.Point(3, 64);
+            this.lblEspecialidad.Name = "lblEspecialidad";
+            this.lblEspecialidad.Size = new System.Drawing.Size(172, 20);
+            this.lblEspecialidad.TabIndex = 3;
+            this.lblEspecialidad.Text = "Especialidades (Máx. 5)";
             // 
             // lstEspecialidadesAgregadas
             // 
-            lstEspecialidadesAgregadas.Dock = DockStyle.Fill;
-            lstEspecialidadesAgregadas.FormattingEnabled = true;
-            lstEspecialidadesAgregadas.Location = new Point(3, 121);
-            lstEspecialidadesAgregadas.Name = "lstEspecialidadesAgregadas";
-            lstEspecialidadesAgregadas.Size = new Size(344, 114);
-            lstEspecialidadesAgregadas.TabIndex = 4;
+            this.lstEspecialidadesAgregadas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstEspecialidadesAgregadas.FormattingEnabled = true;
+            this.lstEspecialidadesAgregadas.Location = new System.Drawing.Point(3, 121);
+            this.lstEspecialidadesAgregadas.Name = "lstEspecialidadesAgregadas";
+            this.lstEspecialidadesAgregadas.Size = new System.Drawing.Size(344, 114);
+            this.lstEspecialidadesAgregadas.TabIndex = 4;
+            // 
+            // btnQuitarEspecialidad
+            // 
+            this.btnQuitarEspecialidad.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnQuitarEspecialidad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnQuitarEspecialidad.ForeColor = System.Drawing.Color.Red;
+            this.btnQuitarEspecialidad.Location = new System.Drawing.Point(177, 241);
+            this.btnQuitarEspecialidad.Name = "btnQuitarEspecialidad";
+            this.btnQuitarEspecialidad.Size = new System.Drawing.Size(170, 29);
+            this.btnQuitarEspecialidad.TabIndex = 5;
+            this.btnQuitarEspecialidad.Text = "Quitar Seleccionada";
+            this.btnQuitarEspecialidad.UseVisualStyleBackColor = true;
+            this.btnQuitarEspecialidad.Click += new System.EventHandler(this.btnQuitarEspecialidad_Click);
             // 
             // chkEstado
             // 
-            chkEstado.Anchor = AnchorStyles.Left;
-            chkEstado.AutoSize = true;
-            chkEstado.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            chkEstado.ForeColor = Color.White;
-            chkEstado.Location = new Point(10, 244);
-            chkEstado.Margin = new Padding(10, 3, 3, 3);
-            chkEstado.Name = "chkEstado";
-            chkEstado.Size = new Size(93, 27);
-            chkEstado.TabIndex = 7;
-            chkEstado.Text = "Abierto";
-            chkEstado.UseVisualStyleBackColor = true;
+            this.chkEstado.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.chkEstado.ForeColor = System.Drawing.Color.White;
+            this.chkEstado.Location = new System.Drawing.Point(10, 279);
+            this.chkEstado.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(93, 27);
+            this.chkEstado.TabIndex = 7;
+            this.chkEstado.Text = "Abierto";
+            this.chkEstado.UseVisualStyleBackColor = true;
             // 
             // btnCrear
             // 
-            btnCrear.Anchor = AnchorStyles.None;
-            btnCrear.BorderStyle = BorderStyle.FixedSingle;
-            btnCrear.Cursor = Cursors.Hand;
-            btnCrear.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnCrear.ForeColor = Color.White;
-            btnCrear.Location = new Point(75, 281);
-            btnCrear.Name = "btnCrear";
-            btnCrear.Size = new Size(200, 39);
-            btnCrear.TabIndex = 8;
-            btnCrear.Text = "Crear Nuevo";
-            btnCrear.TextAlign = ContentAlignment.MiddleCenter;
-            btnCrear.Click += btnCrear_Click;
+            this.btnCrear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCrear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnCrear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCrear.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnCrear.ForeColor = System.Drawing.Color.White;
+            this.btnCrear.Location = new System.Drawing.Point(75, 315);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(200, 39);
+            this.btnCrear.TabIndex = 8;
+            this.btnCrear.Text = "Crear Nuevo";
+            this.btnCrear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // btnEditar
             // 
-            btnEditar.Anchor = AnchorStyles.None;
-            btnEditar.BorderStyle = BorderStyle.FixedSingle;
-            btnEditar.Cursor = Cursors.Hand;
-            btnEditar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(75, 326);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(200, 39);
-            btnEditar.TabIndex = 9;
-            btnEditar.Text = "Guardar Cambios";
-            btnEditar.TextAlign = ContentAlignment.MiddleCenter;
-            btnEditar.Click += btnEditar_Click;
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEditar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(75, 360);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(200, 39);
+            this.btnEditar.TabIndex = 9;
+            this.btnEditar.Text = "Guardar Cambios";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
-            btnEliminar.Anchor = AnchorStyles.None;
-            btnEliminar.BorderStyle = BorderStyle.FixedSingle;
-            btnEliminar.Cursor = Cursors.Hand;
-            btnEliminar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnEliminar.ForeColor = Color.Tomato;
-            btnEliminar.Location = new Point(75, 371);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(200, 39);
-            btnEliminar.TabIndex = 10;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.TextAlign = ContentAlignment.MiddleCenter;
-            btnEliminar.Click += btnEliminar_Click;
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.ForeColor = System.Drawing.Color.Tomato;
+            this.btnEliminar.Location = new System.Drawing.Point(75, 405);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(200, 39);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Anchor = AnchorStyles.None;
-            btnLimpiar.BorderStyle = BorderStyle.FixedSingle;
-            btnLimpiar.Cursor = Cursors.Hand;
-            btnLimpiar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnLimpiar.ForeColor = Color.White;
-            btnLimpiar.Location = new Point(75, 416);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(200, 39);
-            btnLimpiar.TabIndex = 11;
-            btnLimpiar.Text = "Limpiar / Nuevo";
-            btnLimpiar.TextAlign = ContentAlignment.MiddleCenter;
-            btnLimpiar.Click += btnLimpiar_Click;
+            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLimpiar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(75, 450);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(200, 39);
+            this.btnLimpiar.TabIndex = 11;
+            this.btnLimpiar.Text = "Limpiar / Nuevo";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnRegresar
             // 
-            btnRegresar.Anchor = AnchorStyles.None;
-            btnRegresar.BorderStyle = BorderStyle.FixedSingle;
-            btnRegresar.Cursor = Cursors.Hand;
-            btnRegresar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnRegresar.ForeColor = Color.White;
-            btnRegresar.Location = new Point(75, 461);
-            btnRegresar.Name = "btnRegresar";
-            btnRegresar.Size = new Size(200, 39);
-            btnRegresar.TabIndex = 12;
-            btnRegresar.Text = "Regresar";
-            btnRegresar.TextAlign = ContentAlignment.MiddleCenter;
-            btnRegresar.Click += btnRegresar_Click;
+            this.btnRegresar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegresar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnRegresar.ForeColor = System.Drawing.Color.White;
+            this.btnRegresar.Location = new System.Drawing.Point(75, 495);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(200, 39);
+            this.btnRegresar.TabIndex = 12;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // rtbInfoConsultorios
             // 
-            rtbInfoConsultorios.Dock = DockStyle.Fill;
-            rtbInfoConsultorios.Location = new Point(379, 23);
-            rtbInfoConsultorios.Name = "rtbInfoConsultorios";
-            rtbInfoConsultorios.ReadOnly = true;
-            rtbInfoConsultorios.Size = new Size(530, 507);
-            rtbInfoConsultorios.TabIndex = 1;
-            rtbInfoConsultorios.Text = "";
+            this.rtbInfoConsultorios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbInfoConsultorios.Location = new System.Drawing.Point(379, 23);
+            this.rtbInfoConsultorios.Name = "rtbInfoConsultorios";
+            this.rtbInfoConsultorios.ReadOnly = true;
+            this.rtbInfoConsultorios.Size = new System.Drawing.Size(530, 507);
+            this.rtbInfoConsultorios.TabIndex = 1;
+            this.rtbInfoConsultorios.Text = "";
             // 
             // GestionarConsultorios
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(932, 553);
-            Controls.Add(mainTableLayoutPanel);
-            Controls.Add(pictureBox1);
-            Name = "GestionarConsultorios";
-            Text = "Gestionar Consultorios";
-            WindowState = FormWindowState.Maximized;
-            Load += GestionarConsultorios_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            mainTableLayoutPanel.ResumeLayout(false);
-            inputTableLayoutPanel.ResumeLayout(false);
-            inputTableLayoutPanel.PerformLayout();
-            pnlEspecialidades.ResumeLayout(false);
-            ResumeLayout(false);
-
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(932, 553);
+            this.Controls.Add(this.mainTableLayoutPanel);
+            this.Controls.Add(this.pictureBox1);
+            this.Name = "GestionarConsultorios";
+            this.Text = "Gestionar Consultorios";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.GestionarConsultorios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.mainTableLayoutPanel.ResumeLayout(false);
+            this.inputTableLayoutPanel.ResumeLayout(false);
+            this.inputTableLayoutPanel.PerformLayout();
+            this.pnlEspecialidades.ResumeLayout(false);
+            this.ResumeLayout(false);
         }
 
         #endregion
@@ -321,5 +336,6 @@
         private System.Windows.Forms.Button btnAnadirEspecialidad;
         private System.Windows.Forms.Label lblEspecialidad;
         private System.Windows.Forms.ListBox lstEspecialidadesAgregadas;
+        private System.Windows.Forms.Button btnQuitarEspecialidad;
     }
 }

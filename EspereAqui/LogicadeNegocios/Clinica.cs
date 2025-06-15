@@ -15,6 +15,8 @@ namespace EspereAqui.LogicadeNegocios
         public List<Especialidad> Especialidades { get; set; }
         public Action<string> Logger { get; set; }
 
+        private ManualResetEventSlim _pauseEvent = new ManualResetEventSlim(true);
+
         public Clinica()
         {
             Consultorios = new List<Consultorio>();
@@ -104,9 +106,10 @@ namespace EspereAqui.LogicadeNegocios
             }
             return resultado;
         }
-        public void Automatizar(){
+        public void Automatizar()
+        {
             Random random = new Random();
-            List<String> listaEspecialidades= [
+            List<String> listaEspecialidades = [
             "Medicina general",
             "Odontología",
             "Cardiología",
@@ -130,22 +133,25 @@ namespace EspereAqui.LogicadeNegocios
             "Ramírez", "Torres", "Sánchez", "Flores", "Morales"
             };
 
-            
-            for(int i=0; i<random.Next(10); i++){
-                int temp= random.Next(10);
+
+            for (int i = 0; i < random.Next(10); i++)
+            {
+                int temp = random.Next(10);
                 string nombre = nombres[temp];
                 string apellido = apellidos[random.Next(10)];
                 List<Especialidad> especialidadesAAgregar = new List<Especialidad>();
                 int cantEsp = random.Next(1, 2);
-                for (int e = 0; e <cantEsp; e++) {
+                for (int e = 0; e < cantEsp; e++)
+                {
                     especialidadesAAgregar.Add(new Especialidad(listaEspecialidades[random.Next(9)]));
                 }
-                
+
                 string genero = "Mujer";
-                if (temp>4){
-                    genero= "Hombre";
+                if (temp > 4)
+                {
+                    genero = "Hombre";
                 }
-                Paciente pac =new Paciente(nombre, apellido, genero, especialidadesAAgregar);
+                Paciente pac = new Paciente(nombre, apellido, genero, especialidadesAAgregar);
                 this.AgregarPacienteFila(pac);
             }
         }
@@ -166,8 +172,8 @@ namespace EspereAqui.LogicadeNegocios
         public int CalcularTiempo(Consultorio consultorio)
         {
             int resultado = 0;
-            foreach(Especialidad esp in consultorio.Especialidades)
-                resultado +=esp.tiempoConsulta; 
+            foreach (Especialidad esp in consultorio.Especialidades)
+                resultado += esp.tiempoConsulta;
             return resultado;
         }
 
@@ -185,6 +191,19 @@ namespace EspereAqui.LogicadeNegocios
                 paciente.Prioridad++;
             }
             this.FilaClinica.AddRange(cons.Pacientes);
+        }
+
+
+        public void PausarSimulacion()
+        {
+            _pauseEvent.Reset();
+            Logger?.Invoke("SISTEMA: Simulación pausada.");
+        }
+
+        public void ReanudarSimulacion()
+        {
+            _pauseEvent.Set();
+            Logger.Invoke("SISTEMA: Simulación reanudada");
         }
 
         public void Fitness(Action onUIRefresh)
@@ -210,6 +229,7 @@ namespace EspereAqui.LogicadeNegocios
                 Thread.CurrentThread.IsBackground = true;
                 while (true)
                 {
+                    _pauseEvent.Wait();
                     if (this.FilaClinica.Any())
                     {
                         Paciente pacienteAAsignar;
@@ -217,7 +237,7 @@ namespace EspereAqui.LogicadeNegocios
                         {
                             FilaClinica = this.OrdenarPacientesPorPrioridad();
                             pacienteAAsignar = FilaClinica[0];
-                            
+
                         }
 
                         if (pacienteAAsignar != null)
@@ -235,6 +255,7 @@ namespace EspereAqui.LogicadeNegocios
                 Thread.CurrentThread.IsBackground = true;
                 while (true)
                 {
+                    _pauseEvent.Wait();
                     var consultoriosActuales = this.Consultorios.ToList();
                     foreach (Consultorio cons in consultoriosActuales)
                     {
@@ -295,7 +316,7 @@ namespace EspereAqui.LogicadeNegocios
                             {
                                 esp = new Especialidad(nombreEsp);
                                 AgregarEspecialidad(esp);
-                                Logger?.Invoke($"CREADA AL VUELO: La especialidad '{nombreEsp}' fue creada con tiempo por defecto.");
+                                Logger?.Invoke($"Especialidad creada: La especialidad '{nombreEsp}' no estaba en la lista y fue creada con un tiempo por defecto");
                             }
                             especialidadesPaciente.Add(esp);
                         }
@@ -315,5 +336,17 @@ namespace EspereAqui.LogicadeNegocios
                 Logger?.Invoke($"ERROR AL CARGAR JSON: {ex.Message}");
             }
         }
+
+       public void Reiniciar()
+        {
+            _pauseEvent.Reset(); 
+            this.Consultorios.Clear();
+            this.FilaClinica.Clear();
+            this.Especialidades.Clear();
+            CargarEspecialidadesPorDefecto();
+            _pauseEvent.Set(); 
+            Logger?.Invoke("SISTEMA: Todos los datos de la clínica han sido reiniciados.");
+        }
     }
+     
 }

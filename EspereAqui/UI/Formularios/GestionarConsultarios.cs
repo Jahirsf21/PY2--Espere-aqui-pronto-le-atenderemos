@@ -97,6 +97,23 @@ namespace EspereAqui.UI.Formularios
             }
         }
 
+        private void btnQuitarEspecialidad_Click(object sender, EventArgs e)
+        {
+            if (lstEspecialidadesAgregadas.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione una especialidad de la lista para quitar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (lstEspecialidadesAgregadas.Items.Count <= 1)
+            {
+                MessageBox.Show("Un consultorio debe tener al menos una especialidad.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            lstEspecialidadesAgregadas.Items.Remove(lstEspecialidadesAgregadas.SelectedItem);
+        }
+
         private void btnCrear_Click(object sender, EventArgs e)
         {
             if (clinica.Consultorios.Count >= MAX_CONSULTORIOS)
@@ -105,14 +122,20 @@ namespace EspereAqui.UI.Formularios
                 btnCrear.Enabled = false;
                 return;
             }
-             if (lstEspecialidadesAgregadas.Items.Count == 0)
+
+            if (lstEspecialidadesAgregadas.Items.Count == 0)
             {
                 MessageBox.Show("Debe añadir al menos una especialidad al consultorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var nuevoConsultorio = new Consultorio();
+            if (!chkEstado.Checked && clinica.Consultorios.Count(c => c.Estado) == 0)
+            {
+                MessageBox.Show("No se pueden tener todos los consultorios cerrados. Debe haber al menos uno abierto.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            var nuevoConsultorio = new Consultorio();
             nuevoConsultorio.Estado = chkEstado.Checked;
 
             foreach (var item in lstEspecialidadesAgregadas.Items)
@@ -121,9 +144,7 @@ namespace EspereAqui.UI.Formularios
             }
 
             clinica.AgregarConsultorio(nuevoConsultorio);
-
             MessageBox.Show("Consultorio creado exitosamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             ActualizarListaConsultorios();
             LimpiarCampos();
         }
@@ -132,24 +153,28 @@ namespace EspereAqui.UI.Formularios
         {
             if (cmbConsultorios.SelectedItem == null) return;
             
-             if (lstEspecialidadesAgregadas.Items.Count == 0)
+            if (lstEspecialidadesAgregadas.Items.Count == 0)
             {
                 MessageBox.Show("Debe añadir al menos una especialidad al consultorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             var consultorioAEditar = (Consultorio)cmbConsultorios.SelectedItem;
-            consultorioAEditar.Estado = chkEstado.Checked;
 
+            if (consultorioAEditar.Estado && !chkEstado.Checked && clinica.Consultorios.Count(c => c.Estado) == 1)
+            {
+                MessageBox.Show("No se puede cerrar el último consultorio abierto.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            consultorioAEditar.Estado = chkEstado.Checked;
             consultorioAEditar.Especialidades.Clear();
             foreach (var item in lstEspecialidadesAgregadas.Items)
             {
                 consultorioAEditar.AgregarEspecialidad(new Especialidad(item.ToString()));
             }
 
-
             MessageBox.Show("Consultorio actualizado.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             ActualizarListaConsultorios();
             LimpiarCampos();
         }
@@ -159,6 +184,13 @@ namespace EspereAqui.UI.Formularios
             if (cmbConsultorios.SelectedItem == null) return;
 
             var consultorioAEliminar = (Consultorio)cmbConsultorios.SelectedItem;
+
+            if (consultorioAEliminar.Estado && clinica.Consultorios.Count(c => c.Estado) == 1)
+            {
+                 MessageBox.Show("No se puede eliminar el último consultorio abierto.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
             var confirmacion = MessageBox.Show($"¿Está seguro de que desea eliminar el Consultorio ID: {consultorioAEliminar.Id}?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacion == DialogResult.Yes)
@@ -180,7 +212,6 @@ namespace EspereAqui.UI.Formularios
                     lstEspecialidadesAgregadas.Items.Add(esp.nombre);
                 }
                 chkEstado.Checked = consultorioSeleccionado.Estado;
-
                 btnCrear.Enabled = false;
                 btnEditar.Enabled = true;
                 btnEliminar.Enabled = true;

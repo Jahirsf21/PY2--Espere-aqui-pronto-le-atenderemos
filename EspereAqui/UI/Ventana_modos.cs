@@ -46,7 +46,7 @@ namespace EspereAqui.UI
         {
             if (simulacion == null || simulacion.IsDisposed)
             {
-                simulacion = new Ventana_simulacion(this.clinica, modo);
+                simulacion = new Ventana_simulacion(this,this.clinica, modo);
                 simulacion.StartPosition = FormStartPosition.CenterScreen;
             }
             simulacion.Show();
