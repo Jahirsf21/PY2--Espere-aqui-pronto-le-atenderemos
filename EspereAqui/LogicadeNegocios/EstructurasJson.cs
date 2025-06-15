@@ -23,7 +23,9 @@ namespace EspereAqui.LogicadeNegocios.EstructurasJson
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Genero { get; set; }
-        // Lista de nombres de las especialidades que necesita el paciente
+
+        public int Prioridad {get; set;}
+       
         public List<string> EspecialidadesRequeridas { get; set; }
     }
 }

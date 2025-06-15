@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +13,7 @@ namespace EspereAqui.LogicadeNegocios
         public string Genero { get; set; }
         public int Prioridad { get; set; }
         public bool estado { get; set; } 
+        public bool mutado{ get; set; }
 
         public List<EspecialidadPendiente> EspecialidadesPendientes { get; set; }
 

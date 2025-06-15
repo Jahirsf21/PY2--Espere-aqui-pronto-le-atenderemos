@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using EspereAqui.LogicadeNegocios;
@@ -10,7 +10,7 @@ namespace EspereAqui.UI
     public partial class Ventana_simulacion : Form
     {
         private Clinica clinica;
-        private Ventana_modos modosForm;
+        private Ventana_modos modos;
         private bool _isPaused = false;
         private string modoSimulacion;
 
@@ -20,7 +20,7 @@ namespace EspereAqui.UI
         public Ventana_simulacion(Ventana_modos modos, Clinica clinica, string modo)
         {
             InitializeComponent();
-            this.modosForm = modos;
+            this.modos = modos;
             this.clinica = clinica;
             this.modoSimulacion = modo;
             this.clinica.Logger = (msg) => LogMessage(msg);
@@ -42,7 +42,7 @@ namespace EspereAqui.UI
             ActualizarVistasCompletas();
         }
 
-        private void ActualizarVistasCompletas()
+        public void ActualizarVistasCompletas()
         {
             if (this.InvokeRequired)
             {
@@ -53,18 +53,18 @@ namespace EspereAqui.UI
             ActualizarFilaPacientes();
         }
 
-        private void ActualizarVistaConsultorios()
+         private void ActualizarVistaConsultorios()
         {
             pnlConsultoriosContainer.SuspendLayout();
             pnlConsultoriosContainer.Controls.Clear();
-            int consultorioAncho = 90;
+
+            int consultorioAncho = 100;
             int consultorioAltoTotal = pnlConsultoriosContainer.ClientSize.Height - 40;
             int margen = 15;
             int posX = margen;
             int posY = 20;
 
-            var consultoriosSnapshot = clinica.Consultorios.ToList();
-            foreach (var consultorio in consultoriosSnapshot)
+            foreach (var consultorio in clinica.Consultorios)
             {
                 Panel panelTarjetaConsultorio = new Panel
                 {
@@ -81,8 +81,7 @@ namespace EspereAqui.UI
                     Image = Properties.Resources.consultorio,
                     SizeMode = PictureBoxSizeMode.Zoom,
                     Dock = DockStyle.Top,
-                    Height = 50,
-                    BackColor = consultorio.pacienteActual != null ? Color.LightGreen : Color.Transparent
+                    Height = 50
                 };
 
                 Label lblIdConsultorio = new Label
@@ -92,6 +91,19 @@ namespace EspereAqui.UI
                     ForeColor = Color.White,
                     Dock = DockStyle.Top,
                     Height = 25,
+                    TextAlign = ContentAlignment.MiddleCenter
+                };
+            
+
+                string especialidadesConsultorioStr = string.Join("\n", consultorio.Especialidades.Select(e => e.nombre));
+                Label lblEspecialidadesConsultorio = new Label
+                {
+                    Text = especialidadesConsultorioStr,
+                    Font = new Font("Segoe UI", 6.5F, FontStyle.Italic), 
+                    ForeColor = Color.Cyan,
+                    Dock = DockStyle.Top,
+                    AutoSize = true, 
+                    MaximumSize = new Size(consultorioAncho, 0), 
                     TextAlign = ContentAlignment.MiddleCenter
                 };
 
@@ -106,10 +118,12 @@ namespace EspereAqui.UI
                 };
 
                 panelTarjetaConsultorio.Controls.Add(pnlFilaDelConsultorio);
-                panelTarjetaConsultorio.Controls.Add(picConsultorio);
+                panelTarjetaConsultorio.Controls.Add(lblEspecialidadesConsultorio);
                 panelTarjetaConsultorio.Controls.Add(lblIdConsultorio);
+                panelTarjetaConsultorio.Controls.Add(picConsultorio);
 
-                foreach (var paciente in consultorio.Pacientes.ToList())
+                
+                foreach (var paciente in consultorio.Pacientes)
                 {
                     Panel pacienteMiniPanel = new Panel
                     {
@@ -118,10 +132,8 @@ namespace EspereAqui.UI
                         BackColor = Color.Transparent,
                         Margin = new Padding(0, 3, 0, 3)
                     };
-
                     var especialidadActual = paciente.ObtenerSiguienteEspecialidad();
                     string especialidadesStr = especialidadActual != null ? especialidadActual.nombre : "Terminado";
-
                     Label lblPacienteInfo = new Label
                     {
                         Text = $"{paciente.Nombre}\n{especialidadesStr}",
@@ -136,23 +148,33 @@ namespace EspereAqui.UI
                         SizeMode = PictureBoxSizeMode.Zoom,
                         Dock = DockStyle.Top,
                         Height = 40,
-                        BackColor = Color.Transparent,
-                        Image = paciente.Genero == "Mujer" ? Properties.Resources.mujer : Properties.Resources.hombre
+                        BackColor = Color.Transparent
                     };
 
+                    if (paciente.Genero == "Mujer")
+                    {
+                        imgGenero.Image = Properties.Resources.mujer;
+                    }
+                    else
+                    {
+                        imgGenero.Image = Properties.Resources.hombre;
+                    }
                     pacienteMiniPanel.Controls.Add(lblPacienteInfo);
                     pacienteMiniPanel.Controls.Add(imgGenero);
                     pnlFilaDelConsultorio.Controls.Add(pacienteMiniPanel);
-
                     ToolTip tipPacienteMini = new ToolTip();
-                    string infoToolTipPaciente = $"Paciente: {paciente.Nombre} {paciente.Apellido}\nSiguiente: {especialidadesStr}\nPrioridad: {paciente.Prioridad}";
+                    string infoToolTipPaciente = $"Paciente: {paciente.Nombre} {paciente.Apellido}\nEspecialidades: {especialidadesStr}\nPrioridad: {paciente.Prioridad}";
                     tipPacienteMini.SetToolTip(pacienteMiniPanel, infoToolTipPaciente);
+                    tipPacienteMini.SetToolTip(imgGenero, infoToolTipPaciente);
+                    tipPacienteMini.SetToolTip(lblPacienteInfo, infoToolTipPaciente);
                 }
 
                 ToolTip tipConsultorio = new ToolTip();
                 string infoToolTip = consultorio.ToString().Replace(" | ", Environment.NewLine);
                 tipConsultorio.SetToolTip(panelTarjetaConsultorio, infoToolTip);
-
+                tipConsultorio.SetToolTip(picConsultorio, infoToolTip);
+                tipConsultorio.SetToolTip(lblIdConsultorio, infoToolTip);
+                
                 pnlConsultoriosContainer.Controls.Add(panelTarjetaConsultorio);
                 posX += consultorioAncho + margen;
             }
@@ -165,11 +187,9 @@ namespace EspereAqui.UI
             pnlFilaPacientes.SuspendLayout();
             pnlFilaPacientes.Controls.Clear();
 
-            var filaClinicaSnapshot = clinica.FilaClinica.ToList();
-            foreach (var paciente in filaClinicaSnapshot)
+            foreach (var paciente in clinica.FilaClinica)
             {
                 string especialidadesStr = string.Join(", ", paciente.EspecialidadesPendientes.Where(e => !e.Atendida).Select(ep => ep.Especialidad.nombre));
-
                 Label lblInfo = new Label
                 {
                     Text = $"{paciente.Nombre}\n{especialidadesStr}",
@@ -181,7 +201,7 @@ namespace EspereAqui.UI
                     AutoSize = false
                 };
                 Size textSize = TextRenderer.MeasureText(lblInfo.Text, lblInfo.Font);
-                int panelWidth = Math.Max(80, textSize.Width + 20);
+                int panelWidth = Math.Max(80, textSize.Width + 10);
                 Panel pacientePanel = new Panel
                 {
                     Width = panelWidth,
@@ -194,13 +214,21 @@ namespace EspereAqui.UI
                     SizeMode = PictureBoxSizeMode.Zoom,
                     Dock = DockStyle.Top,
                     Height = 60,
-                    BackColor = Color.Transparent,
-                    Image = paciente.Genero == "Mujer" ? Properties.Resources.mujer : Properties.Resources.hombre
+                    BackColor = Color.Transparent
                 };
-
+                if (paciente.Genero == "Mujer")
+                {
+                    imgGenero.Image = Properties.Resources.mujer;
+                }
+                else
+                {
+                    imgGenero.Image = Properties.Resources.hombre;
+                }
                 ToolTip tipPaciente = new ToolTip();
                 string infoToolTip = $"Paciente: {paciente.Nombre} {paciente.Apellido}\nEspecialidades: {especialidadesStr}\nPrioridad: {paciente.Prioridad}";
                 tipPaciente.SetToolTip(pacientePanel, infoToolTip);
+                tipPaciente.SetToolTip(imgGenero, infoToolTip);
+                tipPaciente.SetToolTip(lblInfo, infoToolTip);
 
                 pacientePanel.Controls.Add(lblInfo);
                 pacientePanel.Controls.Add(imgGenero);
@@ -211,7 +239,7 @@ namespace EspereAqui.UI
             pnlFilaPacientes.ResumeLayout();
         }
 
-        private void LogMessage(string message)
+        public void LogMessage(string message)
         {
             if (rtbLog.InvokeRequired)
             {
@@ -265,16 +293,21 @@ namespace EspereAqui.UI
 
         private void btnEmpezarAlgoritmo_Click(object sender, EventArgs e)
         {
-            Action callbackActualizarUI = () => ActualizarVistasCompletas();
-            this.clinica.Fitness(callbackActualizarUI);
-            IniciarSimulacion();
-            btnEmpezarAlgoritmo.Text = "Simulación en Curso...";
-            LogMessage("Simulación estándar iniciada...");
+            if (clinica.Consultorios.Count() != 0 && clinica.FilaClinica.Count() != 0)
+            {
+                Action callbackActualizarUI = () => ActualizarVistasCompletas();
+                this.clinica.IniciarFitness(callbackActualizarUI);
+                IniciarSimulacion();
+                btnEmpezarAlgoritmo.Text = "Simulación en Curso...";
+                LogMessage("Simulación estándar iniciada...");   
+            } else {
+                LogMessage("No se puede empezar la simulación si no hay consultorios ni pacientes."); 
+            }
         }
 
         private void btnEmpezarGenetico_Click(object sender, EventArgs e)
         {
-
+            clinica.Genetico();
         }
 
         private void btnPausar_Click(object sender, EventArgs e)
@@ -296,13 +329,14 @@ namespace EspereAqui.UI
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (btnPausar.Enabled && !_isPaused)
-            {
-                clinica.PausarSimulacion();
-            }
-            clinica.Reiniciar();
-            this.modosForm.Show();
+            clinica.DetenerTodosLosProcesos();
+            this.modos.Show();
             this.Close();
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            clinica.DetenerTodosLosProcesos();
+            base.OnFormClosing(e);
         }
     }
 }

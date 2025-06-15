@@ -14,9 +14,9 @@ namespace EspereAqui.LogicadeNegocios
         public List<Paciente> FilaClinica { get; set; }
         public List<Especialidad> Especialidades { get; set; }
         public Action<string> Logger { get; set; }
-
         private ManualResetEventSlim _pauseEvent = new ManualResetEventSlim(true);
-
+        public CancellationTokenSource _fitnessCancellationTokenSource;
+        
         public Clinica()
         {
             Consultorios = new List<Consultorio>();
@@ -68,7 +68,7 @@ namespace EspereAqui.LogicadeNegocios
             Especialidad especialidadActual = paciente.ObtenerSiguienteEspecialidad();
             if (especialidadActual == null) return;
 
-            List<Consultorio> disponibles = ObtenerConsultoriosEspecialidad(especialidadActual);
+            List<Consultorio> disponibles = ObtenerConsultoriosEspecialidad(especialidadActual, paciente.mutado);
             Consultorio consultorio = ObtenerConsultorioOptimo(disponibles);
 
             if (consultorio == null)
@@ -77,8 +77,12 @@ namespace EspereAqui.LogicadeNegocios
                 {
                     this.AgregarPacienteFila(paciente);
                 }
-                paciente.Prioridad++;
-                Logger?.Invoke($"ESPERA: No hay consultorio para {paciente.Nombre} ({especialidadActual.nombre}). Prioridad aumentada a {paciente.Prioridad}.");
+                if (paciente.Prioridad < 5)
+                {
+                    paciente.Prioridad++;
+                    Logger?.Invoke($"ESPERA: No hay consultorio para {paciente.Nombre} ({especialidadActual.nombre}). Prioridad aumentada a {paciente.Prioridad}.");
+                }
+                
             }
             else
             {
@@ -88,51 +92,36 @@ namespace EspereAqui.LogicadeNegocios
             }
         }
 
-        public List<Consultorio> ObtenerConsultoriosEspecialidad(Especialidad especialidad)
+        public List<Consultorio> ObtenerConsultoriosEspecialidad(Especialidad especialidad, bool mutacion)
         {
             List<Consultorio> resultado = new List<Consultorio>();
             foreach (Consultorio cons in this.Consultorios)
             {
                 if (cons.Contiene(especialidad)) resultado.Add(cons);
             }
-            if (resultado.Count == 0)
-            {
-                Random rand = new Random();
-                int num = rand.Next(1000000);
-                if (num == 105347 && this.Consultorios.Any())
+            if (mutacion){
+                foreach (Consultorio cons in this.Consultorios)
                 {
-                    resultado.Add(this.Consultorios[0]);
+                    if (!cons.Contiene(especialidad))
+                    {
+                        resultado.Add(cons);
+                        return resultado;
+                    }
                 }
             }
             return resultado;
         }
+
         public void Automatizar()
         {
             Random random = new Random();
             List<String> listaEspecialidades = [
-            "Medicina general",
-            "Odontología",
-            "Cardiología",
-            "Pediatría",
-            "Urología",
-            "Ginecología",
-            "Dermatología",
-            "Oftalmología",
-            "Nutriólogo"
+                "Medicina general", "Odontología", "Cardiología", "Pediatría",
+                "Urología", "Ginecología", "Dermatología", "Oftalmología", "Nutriólogo"
             ];
 
-            List<string> nombres = new List<string>
-            {
-            "Ana","María", "Lucía", "Sofía",  "Laura",
-            "Luis", "Carlos","Pedro","Miguel", "Andrés"
-            };
-
-            List<string> apellidos = new List<string>
-            {
-            "García", "Martínez", "López", "Hernández", "Pérez",
-            "Ramírez", "Torres", "Sánchez", "Flores", "Morales"
-            };
-
+            List<string> nombres = new List<string> { "Ana", "María", "Lucía", "Sofía", "Laura", "Luis", "Carlos", "Pedro", "Miguel", "Andrés" };
+            List<string> apellidos = new List<string> { "García", "Martínez", "López", "Hernández", "Pérez", "Ramírez", "Torres", "Sánchez", "Flores", "Morales" };
 
             for (int i = 0; i < random.Next(10); i++)
             {
@@ -147,10 +136,8 @@ namespace EspereAqui.LogicadeNegocios
                 }
 
                 string genero = "Mujer";
-                if (temp > 4)
-                {
-                    genero = "Hombre";
-                }
+                if (temp > 4) genero = "Hombre";
+                
                 Paciente pac = new Paciente(nombre, apellido, genero, especialidadesAAgregar);
                 this.AgregarPacienteFila(pac);
             }
@@ -193,7 +180,6 @@ namespace EspereAqui.LogicadeNegocios
             this.FilaClinica.AddRange(cons.Pacientes);
         }
 
-
         public void PausarSimulacion()
         {
             _pauseEvent.Reset();
@@ -203,10 +189,27 @@ namespace EspereAqui.LogicadeNegocios
         public void ReanudarSimulacion()
         {
             _pauseEvent.Set();
-            Logger.Invoke("SISTEMA: Simulación reanudada");
+            Logger?.Invoke("SISTEMA: Simulación reanudada");
         }
 
-        public void Fitness(Action onUIRefresh)
+        public void DetenerTodosLosProcesos()
+        {
+            _fitnessCancellationTokenSource?.Cancel();
+            _pauseEvent.Set();
+
+            this.FilaClinica.Clear();
+            this.Consultorios.Clear();
+            Especialidades.Clear();
+            CargarEspecialidadesPorDefecto();
+        }
+
+        public void IniciarFitness(Action onUIRefresh)
+        {
+            _fitnessCancellationTokenSource = new CancellationTokenSource();
+            Fitness(onUIRefresh, _fitnessCancellationTokenSource.Token);
+        }
+
+        public void Fitness(Action onUIRefresh, CancellationToken cancellationToken)
         {
             Action<Paciente> manejarPacienteAtendido = (paciente) =>
             {
@@ -227,45 +230,64 @@ namespace EspereAqui.LogicadeNegocios
             new Thread(() =>
             {
                 Thread.CurrentThread.IsBackground = true;
-                while (true)
+                while (!cancellationToken.IsCancellationRequested)
                 {
-                    _pauseEvent.Wait();
-                    if (this.FilaClinica.Any())
+                    try
                     {
-                        Paciente pacienteAAsignar;
-                        lock (FilaClinica)
+                        _pauseEvent.Wait(cancellationToken);
+                        if (cancellationToken.IsCancellationRequested) break;
+                        
+                        if (this.FilaClinica.Any())
                         {
-                            FilaClinica = this.OrdenarPacientesPorPrioridad();
-                            pacienteAAsignar = FilaClinica[0];
+                            Paciente pacienteAAsignar;
+                            lock (FilaClinica)
+                            {
+                                FilaClinica = this.OrdenarPacientesPorPrioridad();
+                                pacienteAAsignar = FilaClinica[0];
+                            }
 
+                            if (pacienteAAsignar != null)
+                            {
+                                this.AgregarPacienteAFilaConsultorio(pacienteAAsignar);
+                            }
                         }
-
-                        if (pacienteAAsignar != null)
-                        {
-                            this.AgregarPacienteAFilaConsultorio(pacienteAAsignar);
-                            //ver como hacemos para comprobar si alguno de los demás que hay en la fila pueden pasar si el actual no puede
-                        }
+                        Thread.Sleep(500);
                     }
-                    Thread.Sleep(2000);
+                    catch (OperationCanceledException)
+                    {
+                        break;
+                    }
                 }
             }).Start();
 
             new Thread(() =>
             {
                 Thread.CurrentThread.IsBackground = true;
-                while (true)
+                while (!cancellationToken.IsCancellationRequested)
                 {
-                    _pauseEvent.Wait();
-                    var consultoriosActuales = this.Consultorios.ToList();
-                    foreach (Consultorio cons in consultoriosActuales)
+                    try
                     {
+                        _pauseEvent.Wait(cancellationToken);
+                        if (cancellationToken.IsCancellationRequested) break;
+                        
+                        var consultoriosActuales = this.Consultorios.ToList();
+                        foreach (Consultorio cons in consultoriosActuales)
+                        {
+                            if (cancellationToken.IsCancellationRequested) break;
+                            
+                            Thread.Sleep(2000);
+                            cons.AtenderPaciente(manejarPacienteAtendido, this.Logger);
+                        }
                         Thread.Sleep(2000);
-                        cons.AtenderPaciente(manejarPacienteAtendido, this.Logger);
                     }
-                    Thread.Sleep(2000);
+                    catch (OperationCanceledException)
+                    {
+                        break;
+                    }
                 }
             }).Start();
         }
+
 
         public void CargarDatosDesdeJson(string rutaArchivo)
         {
@@ -314,7 +336,7 @@ namespace EspereAqui.LogicadeNegocios
 
                             if (esp == null)
                             {
-                                esp = new Especialidad(nombreEsp);
+                                esp = new Especialidad(nombreEsp); 
                                 AgregarEspecialidad(esp);
                                 Logger?.Invoke($"Especialidad creada: La especialidad '{nombreEsp}' no estaba en la lista y fue creada con un tiempo por defecto");
                             }
@@ -323,11 +345,16 @@ namespace EspereAqui.LogicadeNegocios
 
                         if (especialidadesPaciente.Any())
                         {
-                            var nuevoPaciente = new Paciente(pacJson.Nombre, pacJson.Apellido, pacJson.Genero, especialidadesPaciente);
+                            var nuevoPaciente = new Paciente(pacJson.Nombre, pacJson.Apellido, pacJson.Genero, especialidadesPaciente)
+                            {
+                                Prioridad = pacJson.Prioridad
+                            };
                             AgregarPacienteFila(nuevoPaciente);
+                            Logger?.Invoke($"PACIENTE: {nuevoPaciente.Nombre} {nuevoPaciente.Apellido} con prioridad {nuevoPaciente.Prioridad} cargado.");
                         }
                     }
                 }
+
 
                 Logger?.Invoke($"ÉXITO: Se han cargado los datos desde el archivo JSON.");
             }
@@ -340,25 +367,42 @@ namespace EspereAqui.LogicadeNegocios
 
         public void Genetico()
         {
-            foreach (Consultorio cons in this.Consultorios)
+            List<Consultorio> ordenados = this.Consultorios.Where(cons => cons.Pacientes.Count > 0)
+            .OrderBy(cons=>cons.Pacientes.Count()).ToList();
+            if (ordenados.Count() > 1)
             {
-                
+                Consultorio mejor = ordenados[0];
+                Consultorio segundoMejor = ordenados[1];   
+                if (mejor!=segundoMejor && (mejor.Pacientes.Count() + segundoMejor.Pacientes.Count() <= 15))
+                {
+                    this.Cruce(mejor, segundoMejor);
+                } 
+            }
+            
+            
+            Random rand = new Random();
+            int num = rand.Next(1000000);
+            if (num == 105347 && this.Consultorios.Count() != 0)
+            {
+                num = rand.Next(this.FilaClinica.Count());
+                this.FilaClinica[num].mutado = true;
             }
         }
 
-        public void Reiniciar()
+        public void Cruce(Consultorio cons1, Consultorio cons2)
         {
-            _pauseEvent.Reset(); 
-            this.Consultorios.Clear();
-            this.FilaClinica.Clear();
-            this.Especialidades.Clear();
-            CargarEspecialidadesPorDefecto();
-            _pauseEvent.Set(); 
-            Logger?.Invoke("SISTEMA: Todos los datos de la clínica han sido reiniciados.");
+            this.Consultorios.Remove(cons1);
+            this.Consultorios.Remove(cons2);
+            cons1.Pacientes.AddRange(cons2.Pacientes);
+            cons1.Especialidades.AddRange(cons2.Especialidades);
+            List<Paciente> nuevaFila = cons1.Pacientes;
+            List<Especialidad> nuevaListaEspecialidad = cons1.Especialidades;
+            Consultorio nuevoCons = new Consultorio(nuevaListaEspecialidad, nuevaFila);
+            this.Consultorios.Add(nuevoCons);
         }
 
 
         }
     }
      
-}
+

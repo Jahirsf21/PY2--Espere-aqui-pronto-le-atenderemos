@@ -1,4 +1,4 @@
-﻿namespace EspereAqui.UI
+namespace EspereAqui.UI
 {
     partial class Ventana_simulacion
     {

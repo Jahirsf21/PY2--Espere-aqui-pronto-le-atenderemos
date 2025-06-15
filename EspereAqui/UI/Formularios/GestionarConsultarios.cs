@@ -1,4 +1,4 @@
-﻿using EspereAqui.LogicadeNegocios;
+using EspereAqui.LogicadeNegocios;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -59,6 +59,7 @@ namespace EspereAqui.UI.Formularios
             {
                 rtbInfoConsultorios.AppendText(consultorio.ToString() + Environment.NewLine);
             }
+            simulacion.ActualizarVistasCompletas();
         }
 
         private void LimpiarCampos()
@@ -145,6 +146,7 @@ namespace EspereAqui.UI.Formularios
 
             clinica.AgregarConsultorio(nuevoConsultorio);
             MessageBox.Show("Consultorio creado exitosamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            simulacion.LogMessage($"INGRESO: Consultorio {nuevoConsultorio.Id} ha sido creado");
             ActualizarListaConsultorios();
             LimpiarCampos();
         }

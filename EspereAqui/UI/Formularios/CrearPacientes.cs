@@ -1,4 +1,4 @@
-﻿using EspereAqui.LogicadeNegocios;
+using EspereAqui.LogicadeNegocios;
 using System;
 using System.Collections.Generic; 
 using System.Drawing;
@@ -85,13 +85,13 @@ namespace EspereAqui.UI.Formularios
             List<Especialidad> listaDeEspecialidades = especialidadesSeleccionadas.Select(nombreEsp => new Especialidad(nombreEsp)).ToList();
 
             Paciente paciente = new Paciente(nombre, apellido, genero, listaDeEspecialidades);
-            
+            simulacion.LogMessage($"INGRESO: Paciente {paciente.Nombre} {paciente.Apellido} ha sido creado");
             this.clinica.AgregarPacienteFila(paciente);
             richTextBox1.AppendText(paciente.ToString() + Environment.NewLine);
 
             MessageBox.Show("Paciente creado exitosamente y añadido a la fila de espera.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Limpiar campos
+            
+            
             textBox2.Clear();
             textBox1.Clear();
             comboBox3.SelectedIndex = -1;
@@ -99,6 +99,7 @@ namespace EspereAqui.UI.Formularios
             {
                 chkLstEspecialidades.SetItemChecked(i, false);
             }
+            simulacion.ActualizarVistasCompletas();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +25,15 @@ namespace EspereAqui.LogicadeNegocios
             Estado = false;
         }
 
+        public Consultorio(List<Especialidad> especialidades, List<Paciente> pacientes)
+        {
+            Id = nextId++;
+            Especialidades = especialidades;
+            Pacientes = pacientes;
+            pacienteActual = null;
+            Estado = true;
+        }
+
         public void AgregarEspecialidad(Especialidad especialidad)
         {
             if (especialidad != null && !Especialidades.Any(e => e.nombre == especialidad.nombre))
@@ -42,8 +51,11 @@ namespace EspereAqui.LogicadeNegocios
         }
 
         public bool Contiene(Especialidad especialidad){
-            foreach(Especialidad esp in this.Especialidades){
-                if(esp.nombre == especialidad.nombre){
+            if (!this.Estado) return false; 
+            foreach (Especialidad esp in this.Especialidades)
+            {
+                if (esp.nombre == especialidad.nombre)
+                {
                     return true;
                 }
             }

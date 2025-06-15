@@ -19,40 +19,10 @@
   ],
   "Pacientes": [
     {
-      "Nombre": "Ana",
-      "Apellido": "Gomez",
-      "Genero": "Mujer",
-      "EspecialidadesRequeridas": [ "Dermatología", "Nutriólogo" ]
-    },
-    {
       "Nombre": "Carlos",
       "Apellido": "Vargas",
       "Genero": "Hombre",
       "EspecialidadesRequeridas": [ "Medicina general" ]
-    },
-    {
-      "Nombre": "Laura",
-      "Apellido": "Perez",
-      "Genero": "Mujer",
-      "EspecialidadesRequeridas": [ "Ginecología", "Psicología" ]
-    },
-    {
-      "Nombre": "Pedro",
-      "Apellido": "Ramirez",
-      "Genero": "Hombre",
-      "EspecialidadesRequeridas": [ "Cardiología", "Oftalmología" ]
-    },
-    {
-      "Nombre": "Sofia",
-      "Apellido": "Castillo",
-      "Genero": "Mujer",
-      "EspecialidadesRequeridas": [ "Pediatría" ]
-    },
-    {
-      "Nombre": "David",
-      "Apellido": "Rojas",
-      "Genero": "Hombre",
-      "EspecialidadesRequeridas": [ "Urología" ]
     },
     {
       "Nombre": "Maria",
@@ -61,22 +31,70 @@
       "EspecialidadesRequeridas": [ "Medicina general", "Fisioterapia" ]
     },
     {
-      "Nombre": "Jorge",
-      "Apellido": "Mendez",
-      "Genero": "Hombre",
-      "EspecialidadesRequeridas": [ "Odontología" ]
-    },
-    {
-      "Nombre": "Isabela",
-      "Apellido": "Diaz",
+      "Nombre": "Ana",
+      "Apellido": "Gomez",
       "Genero": "Mujer",
-      "EspecialidadesRequeridas": [ "Nutriólogo" ]
+      "EspecialidadesRequeridas": [ "Medicina general" ]
     },
     {
-      "Nombre": "Miguel",
-      "Apellido": "Ortiz",
+      "Nombre": "Luis",
+      "Apellido": "Alvarado",
       "Genero": "Hombre",
-      "EspecialidadesRequeridas": [ "Cardiología" ]
+      "EspecialidadesRequeridas": [ "Medicina general" ]
+    },
+    {
+      "Nombre": "Camila",
+      "Apellido": "Soto",
+      "Genero": "Mujer",
+      "EspecialidadesRequeridas": [ "Medicina general" ]
+    },
+    {
+      "Nombre": "Diego",
+      "Apellido": "Navarro",
+      "Genero": "Hombre",
+      "EspecialidadesRequeridas": [ "Medicina general" ]
+    },
+    {
+      "Nombre": "Lucia",
+      "Apellido": "Torres",
+      "Genero": "Mujer",
+      "EspecialidadesRequeridas": [ "Medicina general" ]
+    },
+    {
+      "Nombre": "Esteban",
+      "Apellido": "Chaves",
+      "Genero": "Hombre",
+      "EspecialidadesRequeridas": [ "Medicina general" ]
+    },
+    {
+      "Nombre": "Valeria",
+      "Apellido": "Castro",
+      "Genero": "Mujer",
+      "EspecialidadesRequeridas": [ "Medicina general" ]
+    },
+    {
+      "Nombre": "Javier",
+      "Apellido": "Morales",
+      "Genero": "Hombre",
+      "EspecialidadesRequeridas": [ "Medicina general" ]
+    },
+    {
+      "Nombre": "Laura",
+      "Apellido": "Perez",
+      "Genero": "Mujer",
+      "EspecialidadesRequeridas": [ "Psicología", "Medicina general" ]
+    },
+    {
+      "Nombre": "Pedro",
+      "Apellido": "Ramirez",
+      "Genero": "Hombre",
+      "EspecialidadesRequeridas": [ "Cardiología", "Medicina general" ]
+    },
+    {
+      "Nombre": "Sofia",
+      "Apellido": "Castillo",
+      "Genero": "Mujer",
+      "EspecialidadesRequeridas": [ "Fisioterapia" ]
     }
   ]
 }

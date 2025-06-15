@@ -1,4 +1,4 @@
-﻿using EspereAqui.LogicadeNegocios;
+using EspereAqui.LogicadeNegocios;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
