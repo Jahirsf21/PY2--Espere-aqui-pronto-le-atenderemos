@@ -27,12 +27,6 @@
             btnAnadirEspecialidad = new Button();
             lblEspecialidad = new Label();
             lstEspecialidadesAgregadas = new ListBox();
-            lblTiempoConsulta = new Label();
-            tiempoTableLayoutPanel = new TableLayoutPanel();
-            nudHoras = new NumericUpDown();
-            nudMinutos = new NumericUpDown();
-            lblHoras = new Label();
-            lblMinutos = new Label();
             chkEstado = new CheckBox();
             btnCrear = new Label();
             btnEditar = new Label();
@@ -44,9 +38,6 @@
             mainTableLayoutPanel.SuspendLayout();
             inputTableLayoutPanel.SuspendLayout();
             pnlEspecialidades.SuspendLayout();
-            tiempoTableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nudHoras).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudMinutos).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -83,28 +74,24 @@
             inputTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             inputTableLayoutPanel.Controls.Add(lblConsultorio, 0, 0);
             inputTableLayoutPanel.Controls.Add(cmbConsultorios, 0, 1);
-            inputTableLayoutPanel.Controls.Add(pnlEspecialidades, 0, 3);
             inputTableLayoutPanel.Controls.Add(lblEspecialidad, 0, 2);
+            inputTableLayoutPanel.Controls.Add(pnlEspecialidades, 0, 3);
             inputTableLayoutPanel.Controls.Add(lstEspecialidadesAgregadas, 0, 4);
-            inputTableLayoutPanel.Controls.Add(lblTiempoConsulta, 0, 5);
-            inputTableLayoutPanel.Controls.Add(tiempoTableLayoutPanel, 0, 6);
-            inputTableLayoutPanel.Controls.Add(chkEstado, 0, 7);
-            inputTableLayoutPanel.Controls.Add(btnCrear, 0, 8);
-            inputTableLayoutPanel.Controls.Add(btnEditar, 0, 9);
-            inputTableLayoutPanel.Controls.Add(btnEliminar, 0, 10);
-            inputTableLayoutPanel.Controls.Add(btnLimpiar, 0, 11);
-            inputTableLayoutPanel.Controls.Add(btnRegresar, 0, 12);
+            inputTableLayoutPanel.Controls.Add(chkEstado, 0, 5);
+            inputTableLayoutPanel.Controls.Add(btnCrear, 0, 6);
+            inputTableLayoutPanel.Controls.Add(btnEditar, 0, 7);
+            inputTableLayoutPanel.Controls.Add(btnEliminar, 0, 8);
+            inputTableLayoutPanel.Controls.Add(btnLimpiar, 0, 9);
+            inputTableLayoutPanel.Controls.Add(btnRegresar, 0, 10);
             inputTableLayoutPanel.Dock = DockStyle.Fill;
             inputTableLayoutPanel.Location = new Point(23, 23);
             inputTableLayoutPanel.Name = "inputTableLayoutPanel";
-            inputTableLayoutPanel.RowCount = 14;
+            inputTableLayoutPanel.RowCount = 12;
             inputTableLayoutPanel.RowStyles.Add(new RowStyle());
             inputTableLayoutPanel.RowStyles.Add(new RowStyle());
             inputTableLayoutPanel.RowStyles.Add(new RowStyle());
             inputTableLayoutPanel.RowStyles.Add(new RowStyle());
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle());
-            inputTableLayoutPanel.RowStyles.Add(new RowStyle());
+            inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 120F));
             inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
             inputTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
@@ -193,81 +180,8 @@
             lstEspecialidadesAgregadas.FormattingEnabled = true;
             lstEspecialidadesAgregadas.Location = new Point(3, 121);
             lstEspecialidadesAgregadas.Name = "lstEspecialidadesAgregadas";
-            lstEspecialidadesAgregadas.Size = new Size(344, 74);
+            lstEspecialidadesAgregadas.Size = new Size(344, 114);
             lstEspecialidadesAgregadas.TabIndex = 4;
-            // 
-            // lblTiempoConsulta
-            // 
-            lblTiempoConsulta.AutoSize = true;
-            lblTiempoConsulta.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblTiempoConsulta.ForeColor = Color.White;
-            lblTiempoConsulta.Location = new Point(3, 208);
-            lblTiempoConsulta.Margin = new Padding(3, 10, 3, 0);
-            lblTiempoConsulta.Name = "lblTiempoConsulta";
-            lblTiempoConsulta.Size = new Size(148, 20);
-            lblTiempoConsulta.TabIndex = 5;
-            lblTiempoConsulta.Text = "Tiempo de Consulta";
-            // 
-            // tiempoTableLayoutPanel
-            // 
-            tiempoTableLayoutPanel.ColumnCount = 4;
-            tiempoTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tiempoTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tiempoTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tiempoTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tiempoTableLayoutPanel.Controls.Add(nudHoras, 0, 0);
-            tiempoTableLayoutPanel.Controls.Add(nudMinutos, 2, 0);
-            tiempoTableLayoutPanel.Controls.Add(lblHoras, 1, 0);
-            tiempoTableLayoutPanel.Controls.Add(lblMinutos, 3, 0);
-            tiempoTableLayoutPanel.Dock = DockStyle.Fill;
-            tiempoTableLayoutPanel.Location = new Point(3, 231);
-            tiempoTableLayoutPanel.Name = "tiempoTableLayoutPanel";
-            tiempoTableLayoutPanel.RowCount = 1;
-            tiempoTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tiempoTableLayoutPanel.Size = new Size(344, 34);
-            tiempoTableLayoutPanel.TabIndex = 6;
-            // 
-            // nudHoras
-            // 
-            nudHoras.Dock = DockStyle.Fill;
-            nudHoras.Location = new Point(3, 3);
-            nudHoras.Name = "nudHoras";
-            nudHoras.Size = new Size(80, 27);
-            nudHoras.TabIndex = 0;
-            // 
-            // nudMinutos
-            // 
-            nudMinutos.Dock = DockStyle.Fill;
-            nudMinutos.Location = new Point(175, 3);
-            nudMinutos.Name = "nudMinutos";
-            nudMinutos.Size = new Size(80, 27);
-            nudMinutos.TabIndex = 1;
-            // 
-            // lblHoras
-            // 
-            lblHoras.AutoSize = true;
-            lblHoras.Dock = DockStyle.Fill;
-            lblHoras.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblHoras.ForeColor = Color.White;
-            lblHoras.Location = new Point(89, 0);
-            lblHoras.Name = "lblHoras";
-            lblHoras.Size = new Size(80, 34);
-            lblHoras.TabIndex = 2;
-            lblHoras.Text = "hrs";
-            lblHoras.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // lblMinutos
-            // 
-            lblMinutos.AutoSize = true;
-            lblMinutos.Dock = DockStyle.Fill;
-            lblMinutos.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblMinutos.ForeColor = Color.White;
-            lblMinutos.Location = new Point(261, 0);
-            lblMinutos.Name = "lblMinutos";
-            lblMinutos.Size = new Size(80, 34);
-            lblMinutos.TabIndex = 3;
-            lblMinutos.Text = "min";
-            lblMinutos.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // chkEstado
             // 
@@ -275,7 +189,7 @@
             chkEstado.AutoSize = true;
             chkEstado.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             chkEstado.ForeColor = Color.White;
-            chkEstado.Location = new Point(10, 274);
+            chkEstado.Location = new Point(10, 244);
             chkEstado.Margin = new Padding(10, 3, 3, 3);
             chkEstado.Name = "chkEstado";
             chkEstado.Size = new Size(93, 27);
@@ -290,7 +204,7 @@
             btnCrear.Cursor = Cursors.Hand;
             btnCrear.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnCrear.ForeColor = Color.White;
-            btnCrear.Location = new Point(75, 311);
+            btnCrear.Location = new Point(75, 281);
             btnCrear.Name = "btnCrear";
             btnCrear.Size = new Size(200, 39);
             btnCrear.TabIndex = 8;
@@ -305,7 +219,7 @@
             btnEditar.Cursor = Cursors.Hand;
             btnEditar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(75, 356);
+            btnEditar.Location = new Point(75, 326);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(200, 39);
             btnEditar.TabIndex = 9;
@@ -320,7 +234,7 @@
             btnEliminar.Cursor = Cursors.Hand;
             btnEliminar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.Tomato;
-            btnEliminar.Location = new Point(75, 401);
+            btnEliminar.Location = new Point(75, 371);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(200, 39);
             btnEliminar.TabIndex = 10;
@@ -335,7 +249,7 @@
             btnLimpiar.Cursor = Cursors.Hand;
             btnLimpiar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnLimpiar.ForeColor = Color.White;
-            btnLimpiar.Location = new Point(75, 446);
+            btnLimpiar.Location = new Point(75, 416);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(200, 39);
             btnLimpiar.TabIndex = 11;
@@ -350,7 +264,7 @@
             btnRegresar.Cursor = Cursors.Hand;
             btnRegresar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnRegresar.ForeColor = Color.White;
-            btnRegresar.Location = new Point(75, 491);
+            btnRegresar.Location = new Point(75, 461);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(200, 39);
             btnRegresar.TabIndex = 12;
@@ -384,10 +298,6 @@
             inputTableLayoutPanel.ResumeLayout(false);
             inputTableLayoutPanel.PerformLayout();
             pnlEspecialidades.ResumeLayout(false);
-            tiempoTableLayoutPanel.ResumeLayout(false);
-            tiempoTableLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)nudHoras).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudMinutos).EndInit();
             ResumeLayout(false);
 
         }
@@ -399,12 +309,6 @@
         private System.Windows.Forms.TableLayoutPanel inputTableLayoutPanel;
         private System.Windows.Forms.Label lblConsultorio;
         private System.Windows.Forms.ComboBox cmbConsultorios;
-        private System.Windows.Forms.Label lblTiempoConsulta;
-        private System.Windows.Forms.TableLayoutPanel tiempoTableLayoutPanel;
-        private System.Windows.Forms.NumericUpDown nudHoras;
-        private System.Windows.Forms.NumericUpDown nudMinutos;
-        private System.Windows.Forms.Label lblHoras;
-        private System.Windows.Forms.Label lblMinutos;
         private System.Windows.Forms.CheckBox chkEstado;
         private System.Windows.Forms.Label btnCrear;
         private System.Windows.Forms.Label btnEditar;

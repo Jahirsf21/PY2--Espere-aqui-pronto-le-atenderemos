@@ -25,10 +25,6 @@ namespace EspereAqui.UI.Formularios
         {
             mainTableLayoutPanel.Location = new Point(0, 0);
             pictureBox1.Controls.Add(mainTableLayoutPanel);
-
-            nudHoras.Maximum = 2;
-            nudMinutos.Maximum = 59;
-
             CargarEspecialidadesComboBox();
             ActualizarListaConsultorios();
             LimpiarCampos();
@@ -37,15 +33,10 @@ namespace EspereAqui.UI.Formularios
         private void CargarEspecialidadesComboBox()
         {
             cmbEspecialidad.Items.Clear();
-            cmbEspecialidad.Items.Add("Medicina general");
-            cmbEspecialidad.Items.Add("Odontología");
-            cmbEspecialidad.Items.Add("Cardiología");
-            cmbEspecialidad.Items.Add("Pediatría");
-            cmbEspecialidad.Items.Add("Urología");
-            cmbEspecialidad.Items.Add("Ginecología");
-            cmbEspecialidad.Items.Add("Dermatología");
-            cmbEspecialidad.Items.Add("Oftalmología");
-            cmbEspecialidad.Items.Add("Nutriólogo");
+            foreach (var especialidad in clinica.Especialidades.OrderBy(e => e.nombre))
+            {
+                cmbEspecialidad.Items.Add(especialidad.nombre);
+            }
         }
 
         private void ActualizarListaConsultorios()
@@ -75,11 +66,9 @@ namespace EspereAqui.UI.Formularios
             cmbConsultorios.SelectedIndex = -1;
             cmbEspecialidad.SelectedIndex = -1;
             lstEspecialidadesAgregadas.Items.Clear();
-            nudHoras.Value = 0;
-            nudMinutos.Value = 30;
             chkEstado.Checked = false;
             btnCrear.Enabled = clinica.Consultorios.Count < MAX_CONSULTORIOS;
-            btnEditar.Enabled = false; 
+            btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
         }
 
@@ -116,12 +105,14 @@ namespace EspereAqui.UI.Formularios
                 btnCrear.Enabled = false;
                 return;
             }
+             if (lstEspecialidadesAgregadas.Items.Count == 0)
+            {
+                MessageBox.Show("Debe añadir al menos una especialidad al consultorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             var nuevoConsultorio = new Consultorio();
 
-            int horas = (int)nudHoras.Value;
-            int minutos = (int)nudMinutos.Value;
-            nuevoConsultorio.TiempoConsulta = (horas * 60) + minutos;
             nuevoConsultorio.Estado = chkEstado.Checked;
 
             foreach (var item in lstEspecialidadesAgregadas.Items)
@@ -140,12 +131,14 @@ namespace EspereAqui.UI.Formularios
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (cmbConsultorios.SelectedItem == null) return;
+            
+             if (lstEspecialidadesAgregadas.Items.Count == 0)
+            {
+                MessageBox.Show("Debe añadir al menos una especialidad al consultorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             var consultorioAEditar = (Consultorio)cmbConsultorios.SelectedItem;
-
-            int horas = (int)nudHoras.Value;
-            int minutos = (int)nudMinutos.Value;
-            consultorioAEditar.TiempoConsulta = (horas * 60) + minutos;
             consultorioAEditar.Estado = chkEstado.Checked;
 
             consultorioAEditar.Especialidades.Clear();
@@ -153,6 +146,7 @@ namespace EspereAqui.UI.Formularios
             {
                 consultorioAEditar.AgregarEspecialidad(new Especialidad(item.ToString()));
             }
+
 
             MessageBox.Show("Consultorio actualizado.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -169,7 +163,7 @@ namespace EspereAqui.UI.Formularios
 
             if (confirmacion == DialogResult.Yes)
             {
-                clinica.Consultorios.Remove(consultorioAEliminar);
+                clinica.EliminarConsultorio(consultorioAEliminar);
                 MessageBox.Show("Consultorio eliminado.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ActualizarListaConsultorios();
                 LimpiarCampos();
@@ -185,9 +179,6 @@ namespace EspereAqui.UI.Formularios
                 {
                     lstEspecialidadesAgregadas.Items.Add(esp.nombre);
                 }
-
-                nudHoras.Value = consultorioSeleccionado.TiempoConsulta / 60;
-                nudMinutos.Value = consultorioSeleccionado.TiempoConsulta % 60;
                 chkEstado.Checked = consultorioSeleccionado.Estado;
 
                 btnCrear.Enabled = false;

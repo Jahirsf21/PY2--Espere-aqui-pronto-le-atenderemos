@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Linq; 
 using System.Windows.Forms;
 
-
 namespace EspereAqui.UI.Formularios
 {
     public partial class CrearPacientes : Form
@@ -35,20 +34,19 @@ namespace EspereAqui.UI.Formularios
 
         private void btnCrearPaciente_Click(object sender, EventArgs e)
         {
-
             string nombre = textBox2.Text.Trim();
             string apellido = textBox1.Text.Trim();
             string genero = comboBox3.Text;
 
             var especialidadesSeleccionadas = chkLstEspecialidades.CheckedItems.OfType<string>().ToList();
 
-            if (string.IsNullOrWhiteSpace(nombre) || !nombre.All(char.IsLetter))
+            if (string.IsNullOrWhiteSpace(nombre) || !nombre.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
             {
                 MessageBox.Show("Ingrese un nombre válido (solo letras).", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(apellido) || !apellido.All(char.IsLetter))
+            if (string.IsNullOrWhiteSpace(apellido) || !apellido.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
             {
                 MessageBox.Show("Ingrese un apellido válido (solo letras).", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -60,7 +58,6 @@ namespace EspereAqui.UI.Formularios
                 return;
             }
             
-
             if (especialidadesSeleccionadas.Count == 0)
             {
                 MessageBox.Show("Seleccione al menos una especialidad.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -92,8 +89,9 @@ namespace EspereAqui.UI.Formularios
             this.clinica.AgregarPacienteFila(paciente);
             richTextBox1.AppendText(paciente.ToString() + Environment.NewLine);
 
-            MessageBox.Show("Paciente creado exitosamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Paciente creado exitosamente y añadido a la fila de espera.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            // Limpiar campos
             textBox2.Clear();
             textBox1.Clear();
             comboBox3.SelectedIndex = -1;
