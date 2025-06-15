@@ -246,7 +246,7 @@ namespace EspereAqui.LogicadeNegocios
                             //ver como hacemos para comprobar si alguno de los demás que hay en la fila pueden pasar si el actual no puede
                         }
                     }
-                    Thread.Sleep(1500);
+                    Thread.Sleep(2000);
                 }
             }).Start();
 
@@ -262,7 +262,7 @@ namespace EspereAqui.LogicadeNegocios
                         Thread.Sleep(2000);
                         cons.AtenderPaciente(manejarPacienteAtendido, this.Logger);
                     }
-                    Thread.Sleep(1000);
+                    Thread.Sleep(2000);
                 }
             }).Start();
         }
@@ -337,7 +337,16 @@ namespace EspereAqui.LogicadeNegocios
             }
         }
 
-       public void Reiniciar()
+
+        public void Genetico()
+        {
+            foreach (Consultorio cons in this.Consultorios)
+            {
+                
+            }
+        }
+
+        public void Reiniciar()
         {
             _pauseEvent.Reset(); 
             this.Consultorios.Clear();
@@ -346,6 +355,9 @@ namespace EspereAqui.LogicadeNegocios
             CargarEspecialidadesPorDefecto();
             _pauseEvent.Set(); 
             Logger?.Invoke("SISTEMA: Todos los datos de la clínica han sido reiniciados.");
+        }
+
+
         }
     }
      

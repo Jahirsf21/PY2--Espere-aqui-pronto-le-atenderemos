@@ -1,0 +1,82 @@
+{
+  "Especialidades": [
+    {
+      "Nombre": "Medicina general",
+      "TiempoConsulta": 25
+    },
+    {
+      "Nombre": "Cardiología",
+      "TiempoConsulta": 60
+    },
+    {
+      "Nombre": "Psicología",
+      "TiempoConsulta": 50
+    },
+    {
+      "Nombre": "Fisioterapia",
+      "TiempoConsulta": 45
+    }
+  ],
+  "Pacientes": [
+    {
+      "Nombre": "Ana",
+      "Apellido": "Gomez",
+      "Genero": "Mujer",
+      "EspecialidadesRequeridas": [ "Dermatología", "Nutriólogo" ]
+    },
+    {
+      "Nombre": "Carlos",
+      "Apellido": "Vargas",
+      "Genero": "Hombre",
+      "EspecialidadesRequeridas": [ "Medicina general" ]
+    },
+    {
+      "Nombre": "Laura",
+      "Apellido": "Perez",
+      "Genero": "Mujer",
+      "EspecialidadesRequeridas": [ "Ginecología", "Psicología" ]
+    },
+    {
+      "Nombre": "Pedro",
+      "Apellido": "Ramirez",
+      "Genero": "Hombre",
+      "EspecialidadesRequeridas": [ "Cardiología", "Oftalmología" ]
+    },
+    {
+      "Nombre": "Sofia",
+      "Apellido": "Castillo",
+      "Genero": "Mujer",
+      "EspecialidadesRequeridas": [ "Pediatría" ]
+    },
+    {
+      "Nombre": "David",
+      "Apellido": "Rojas",
+      "Genero": "Hombre",
+      "EspecialidadesRequeridas": [ "Urología" ]
+    },
+    {
+      "Nombre": "Maria",
+      "Apellido": "Fernandez",
+      "Genero": "Mujer",
+      "EspecialidadesRequeridas": [ "Medicina general", "Fisioterapia" ]
+    },
+    {
+      "Nombre": "Jorge",
+      "Apellido": "Mendez",
+      "Genero": "Hombre",
+      "EspecialidadesRequeridas": [ "Odontología" ]
+    },
+    {
+      "Nombre": "Isabela",
+      "Apellido": "Diaz",
+      "Genero": "Mujer",
+      "EspecialidadesRequeridas": [ "Nutriólogo" ]
+    },
+    {
+      "Nombre": "Miguel",
+      "Apellido": "Ortiz",
+      "Genero": "Hombre",
+      "EspecialidadesRequeridas": [ "Cardiología" ]
+    }
+  ]
+}
