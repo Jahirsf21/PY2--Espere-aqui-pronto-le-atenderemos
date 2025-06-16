@@ -74,17 +74,21 @@ namespace EspereAqui.LogicadeNegocios
             List<Consultorio> disponibles = ObtenerConsultoriosEspecialidad(especialidadActual, paciente.mutado);
             Consultorio consultorio = ObtenerConsultorioOptimo(disponibles);
 
-            if (consultorio == null)
+            if (consultorio == null )
             {
-                if (!FilaClinica.Contains(paciente))
+                
+                 
+                    if (!FilaClinica.Contains(paciente))
                 {
                     this.AgregarPacienteFila(paciente);
                 }
-                if (paciente.Prioridad < 5)
-                {
-                    paciente.Prioridad++;
-                    Logger?.Invoke($"ESPERA: No hay consultorio para {paciente.Nombre} ({especialidadActual.nombre}). Prioridad aumentada a {paciente.Prioridad}.");
-                }
+                    if (paciente.Prioridad < 5)
+                    {
+                        paciente.Prioridad++;
+                        Logger?.Invoke($"ESPERA: No hay consultorio para {paciente.Nombre} ({especialidadActual.nombre}). Prioridad aumentada a {paciente.Prioridad}.");
+                    }
+                
+                
 
             }
             else
@@ -119,24 +123,26 @@ namespace EspereAqui.LogicadeNegocios
         public void Automatizar()
         {
             Random random = new Random();
-            List<String> listaEspecialidades = [
-                "Medicina general", "Odontología", "Cardiología", "Pediatría",
-                "Urología", "Ginecología", "Dermatología", "Oftalmología", "Nutriólogo"
-            ];
 
             List<string> nombres = new List<string> { "Ana", "María", "Lucía", "Sofía", "Laura", "Luis", "Carlos", "Pedro", "Miguel", "Andrés" };
             List<string> apellidos = new List<string> { "García", "Martínez", "López", "Hernández", "Pérez", "Ramírez", "Torres", "Sánchez", "Flores", "Morales" };
 
-            for (int i = 0; i < random.Next(10); i++)
+            for (int i = 0; i <= random.Next(10); i++)
             {
+                List<String> listaEspecialidades = [
+                "Medicina general", "Odontología", "Cardiología", "Pediatría",
+                "Urología", "Ginecología", "Dermatología", "Oftalmología", "Nutriólogo"
+                ];
                 int temp = random.Next(10);
                 string nombre = nombres[temp];
                 string apellido = apellidos[random.Next(10)];
                 List<Especialidad> especialidadesAAgregar = new List<Especialidad>();
-                int cantEsp = random.Next(1, 2);
+                int cantEsp = random.Next(1, 3);
                 for (int e = 0; e < cantEsp; e++)
                 {
-                    especialidadesAAgregar.Add(new Especialidad(listaEspecialidades[random.Next(9)]));
+                    string Esptemp = listaEspecialidades[random.Next(listaEspecialidades.Count())];
+                    especialidadesAAgregar.Add(new Especialidad(Esptemp));
+                    listaEspecialidades.Remove(Esptemp);
                 }
 
                 string genero = "Mujer";
@@ -243,17 +249,22 @@ namespace EspereAqui.LogicadeNegocios
 
                         if (this.FilaClinica.Any())
                         {
-                            Paciente pacienteAAsignar;
-                            lock (FilaClinica)
+                            for (int i = 0; i < FilaClinica.Count(); i++)
                             {
-                                FilaClinica = this.OrdenarPacientesPorPrioridad();
-                                pacienteAAsignar = FilaClinica[0];
-                            }
+                                Paciente pacienteAAsignar;
+                                lock (FilaClinica)
+                                {
+                                    FilaClinica = this.OrdenarPacientesPorPrioridad();
+                                    pacienteAAsignar = FilaClinica[i];
+                                }
 
-                            if (pacienteAAsignar != null)
-                            {
-                                this.AgregarPacienteAFilaConsultorio(pacienteAAsignar);
+                                if (pacienteAAsignar != null)
+                                {
+                                    this.AgregarPacienteAFilaConsultorio(pacienteAAsignar);
+                                }
+                                Thread.Sleep(2000);
                             }
+                                
                         }
 
                         bool noHayPacientesEnFilaGeneral = !this.FilaClinica.Any();

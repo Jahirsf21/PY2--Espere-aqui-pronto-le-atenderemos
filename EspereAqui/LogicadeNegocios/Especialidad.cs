@@ -46,9 +46,15 @@ namespace EspereAqui.LogicadeNegocios
                     tiempoConsulta = 34;
                     break;
                 default:
-                    tiempoConsulta = 30; 
+                    tiempoConsulta = 30;
                     break;
             }
+        }
+
+        public bool Equals(Especialidad esp)
+        {
+            if (this.nombre == esp.nombre) return true;
+            return false;
         }
     }
 }
