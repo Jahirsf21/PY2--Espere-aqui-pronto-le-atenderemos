@@ -76,17 +76,23 @@ namespace EspereAqui.LogicadeNegocios
 
             if (consultorio == null )
             {
-                
-                 
-                    if (!FilaClinica.Contains(paciente))
+                if (paciente.EspecialidadesPendientes.Count() == 2)
                 {
-                    this.AgregarPacienteFila(paciente);
+                    this.AtenderSegundaEspecialidad(paciente);
                 }
+                else
+                {
+                    if (!FilaClinica.Contains(paciente))
+                    {
+                        this.AgregarPacienteFila(paciente);
+                    } 
                     if (paciente.Prioridad < 5)
                     {
                         paciente.Prioridad++;
                         Logger?.Invoke($"ESPERA: No hay consultorio para {paciente.Nombre} ({especialidadActual.nombre}). Prioridad aumentada a {paciente.Prioridad}.");
                     }
+                }
+                
                 
                 
 
@@ -100,6 +106,36 @@ namespace EspereAqui.LogicadeNegocios
             }
         }
 
+        public void AtenderSegundaEspecialidad(Paciente paciente)
+        {
+             Especialidad especialidadActual = paciente.EspecialidadesPendientes[1].Especialidad;
+            if (especialidadActual == null) return;
+
+            List<Consultorio> disponibles = ObtenerConsultoriosEspecialidad(especialidadActual, paciente.mutado);
+            Consultorio consultorio = ObtenerConsultorioOptimo(disponibles);
+
+            if (consultorio == null )
+            {
+                    if (!FilaClinica.Contains(paciente))
+                    {
+                        this.AgregarPacienteFila(paciente);
+                    } 
+                    if (paciente.Prioridad < 5)
+                    {
+                        paciente.Prioridad++;
+                        Logger?.Invoke($"ESPERA: No hay consultorio para {paciente.Nombre} ({especialidadActual.nombre}). Prioridad aumentada a {paciente.Prioridad}.");
+                    }
+            }
+            else
+            {
+                paciente.cambiarOrdenEspecialidades();
+                consultorio.AgregarPacienteFila(paciente);
+                this.FilaClinica.Remove(paciente);
+                Logger?.Invoke($"ASIGNADO: Paciente {paciente.Nombre} puesto en fila de C-{consultorio.Id} para {especialidadActual.nombre}.");
+                
+            }  
+        }
+
         public List<Consultorio> ObtenerConsultoriosEspecialidad(Especialidad especialidad, bool mutacion)
         {
             List<Consultorio> resultado = new List<Consultorio>();
@@ -107,7 +143,8 @@ namespace EspereAqui.LogicadeNegocios
             {
                 if (cons.Contiene(especialidad)) resultado.Add(cons);
             }
-            if (mutacion){
+            if (mutacion)
+            {
                 foreach (Consultorio cons in this.Consultorios)
                 {
                     if (!cons.Contiene(especialidad))

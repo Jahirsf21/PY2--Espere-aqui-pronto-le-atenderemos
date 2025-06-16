@@ -41,6 +41,10 @@ namespace EspereAqui.LogicadeNegocios
             if (esp != null) esp.Atendida = true;
         }
 
+        public void cambiarOrdenEspecialidades()
+        {
+            (this.EspecialidadesPendientes[0], this.EspecialidadesPendientes[1]) = (this.EspecialidadesPendientes[1], this.EspecialidadesPendientes[0]);
+        }
         public bool TieneEspecialidadesPendientes()
         {
             return EspecialidadesPendientes.Any(e => !e.Atendida);
