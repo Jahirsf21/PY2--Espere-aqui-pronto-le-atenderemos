@@ -85,7 +85,12 @@ namespace EspereAqui.LogicadeNegocios
                     if (!FilaClinica.Contains(paciente))
                     {
                         this.AgregarPacienteFila(paciente);
-                    } 
+                    }
+                    if (!paciente.mutado)
+                    {
+                        paciente.Prioridad += 2;
+                        Logger?.Invoke($"REINTENTO: Paciente {paciente.Nombre} {paciente.Apellido} no puede ser atendido (sin mutación). Prioridad +2.");
+                    }
                     if (paciente.Prioridad < 5)
                     {
                         paciente.Prioridad++;

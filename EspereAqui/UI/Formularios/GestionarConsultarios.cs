@@ -148,6 +148,7 @@ namespace EspereAqui.UI.Formularios
             MessageBox.Show("Consultorio creado exitosamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             simulacion.LogMessage($"INGRESO: Consultorio {nuevoConsultorio.Id} ha sido creado");
             ActualizarListaConsultorios();
+            simulacion.ActualizarVistasCompletas();
             LimpiarCampos();
         }
 
@@ -163,21 +164,55 @@ namespace EspereAqui.UI.Formularios
 
             var consultorioAEditar = (Consultorio)cmbConsultorios.SelectedItem;
 
+            bool seCierra = consultorioAEditar.Estado && !chkEstado.Checked;
+
             if (consultorioAEditar.Estado && !chkEstado.Checked && clinica.Consultorios.Count(c => c.Estado) == 1)
             {
                 MessageBox.Show("No se puede cerrar el último consultorio abierto.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            var especialidadesAntes = consultorioAEditar.Especialidades.Select(e => e.nombre).ToList();
             consultorioAEditar.Estado = chkEstado.Checked;
             consultorioAEditar.Especialidades.Clear();
             foreach (var item in lstEspecialidadesAgregadas.Items)
             {
                 consultorioAEditar.AgregarEspecialidad(new Especialidad(item.ToString()));
             }
+            var especialidadesDespues = consultorioAEditar.Especialidades.Select(e => e.nombre).ToList();
+            var especialidadesEliminadas = especialidadesAntes.Except(especialidadesDespues).ToList();
+
+            if (especialidadesEliminadas.Any())
+            {
+                var pacientesAReordenar = consultorioAEditar.Pacientes
+                    .Where(p => p.ObtenerSiguienteEspecialidad() != null && especialidadesEliminadas.Contains(p.ObtenerSiguienteEspecialidad().nombre))
+                    .ToList();
+                foreach (var paciente in pacientesAReordenar)
+                {
+                    paciente.Prioridad += 2;
+                    clinica.Logger?.Invoke($"REORDEN: Paciente {paciente.Nombre} {paciente.Apellido} recibe +2 prioridad por eliminación de especialidad en consultorio C-{consultorioAEditar.Id}.");
+                    clinica.FilaClinica.Add(paciente);
+                    consultorioAEditar.Pacientes.Remove(paciente);
+                }
+                if (pacientesAReordenar.Any())
+                {
+                    clinica.Logger?.Invoke($"ADMIN: Se eliminaron especialidades en C-{consultorioAEditar.Id}. Pacientes devueltos a la fila general.");
+                }
+            }
+            if (seCierra)
+            {
+                foreach (var paciente in consultorioAEditar.Pacientes.ToList())
+                {
+                    paciente.Prioridad += 2;
+                    clinica.Logger?.Invoke($"REORDEN: Paciente {paciente.Nombre} {paciente.Apellido} recibe +2 prioridad por cierre de consultorio C-{consultorioAEditar.Id}.");
+                }
+                clinica.FilaClinica.AddRange(consultorioAEditar.Pacientes);
+                clinica.Logger?.Invoke($"ADMIN: Se ha cerrado el consultorio C-{consultorioAEditar.Id}. Pacientes devueltos a la fila general.");
+                consultorioAEditar.Pacientes.Clear();
+            }
 
             MessageBox.Show("Consultorio actualizado.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ActualizarListaConsultorios();
+            simulacion.ActualizarVistasCompletas();
             LimpiarCampos();
         }
 
