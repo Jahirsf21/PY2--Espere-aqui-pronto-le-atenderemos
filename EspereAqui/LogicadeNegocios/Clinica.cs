@@ -86,11 +86,6 @@ namespace EspereAqui.LogicadeNegocios
                     {
                         this.AgregarPacienteFila(paciente);
                     }
-                    if (!paciente.mutado)
-                    {
-                        paciente.Prioridad += 2;
-                        Logger?.Invoke($"REINTENTO: Paciente {paciente.Nombre} {paciente.Apellido} no puede ser atendido (sin mutación). Prioridad +2.");
-                    }
                     if (paciente.Prioridad < 5)
                     {
                         paciente.Prioridad++;
@@ -189,9 +184,28 @@ namespace EspereAqui.LogicadeNegocios
 
                 string genero = "Mujer";
                 if (temp > 4) genero = "Hombre";
-                
+
                 Paciente pac = new Paciente(nombre, apellido, genero, especialidadesAAgregar);
                 this.AgregarPacienteFila(pac);
+            }
+
+            for (int i = 0; i <= random.Next((10)); i++)
+            {
+                List<String> listaEspecialidades = [
+                "Medicina general", "Odontología", "Cardiología", "Pediatría",
+                "Urología", "Ginecología", "Dermatología", "Oftalmología", "Nutriólogo"
+                ];
+                int temp = random.Next(10);
+                List<Especialidad> especialidadesAAgregar = new List<Especialidad>();
+                int cantEsp = random.Next(1, 3);
+                for (int e = 0; e < cantEsp; e++)
+                {
+                    string Esptemp = listaEspecialidades[temp];
+                    especialidadesAAgregar.Add(new Especialidad(Esptemp));
+                    listaEspecialidades.Remove(Esptemp);
+                }
+                Consultorio consultorio = new Consultorio(especialidadesAAgregar, new List<Paciente>());
+                this.Consultorios.Add(consultorio);
             }
         }
 

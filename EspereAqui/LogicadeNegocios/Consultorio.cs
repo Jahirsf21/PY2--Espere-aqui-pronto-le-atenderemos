@@ -84,29 +84,39 @@ namespace EspereAqui.LogicadeNegocios
             var pacienteSiendoAtendido = pacienteActual;
             Especialidad actual = pacienteSiendoAtendido.ObtenerSiguienteEspecialidad();
 
-            if (actual != null)
+            if (actual != null && !this.Especialidades.Any(e => e.nombre == actual.nombre))
             {
-                TiempoConsulta = actual.tiempoConsulta;
-                
-                logger?.Invoke($"ATENDIENDO: C-{Id} empieza a atender a {pacienteSiendoAtendido.Nombre} para {actual.nombre}.");
-                
-                onConsultaTerminada?.Invoke(null); 
-
-                await Task.Delay(1000 * TiempoConsulta /5);
-                
-                pacienteSiendoAtendido.MarcarEspecialidadComoAtendida(actual);
-
-                if (pacienteSiendoAtendido.TieneEspecialidadesPendientes())
-                {
-                    logger?.Invoke($"RE-ENCOLADO: {pacienteSiendoAtendido.Nombre} terminó {actual.nombre} en C-{Id}. Regresa a la fila general.");
-                    pacienteSiendoAtendido.estado = false;
-                    pacienteSiendoAtendido.Prioridad++;
-                }
-                else
-                {
-                    pacienteSiendoAtendido.estado = true; 
-                }
+                pacienteSiendoAtendido.Prioridad += 2;
+                logger?.Invoke($"REORDEN: Paciente {pacienteSiendoAtendido.Nombre} {pacienteSiendoAtendido.Apellido} devuelto a la fila general (+2 prioridad) porque C-{Id} no atiende {actual.nombre}.");
+                pacienteActual = null;
+                onConsultaTerminada?.Invoke(pacienteSiendoAtendido);
+                return;
             }
+            
+
+            if (actual != null)
+                {
+                    TiempoConsulta = actual.tiempoConsulta;
+
+                    logger?.Invoke($"ATENDIENDO: C-{Id} empieza a atender a {pacienteSiendoAtendido.Nombre} para {actual.nombre}.");
+
+                    onConsultaTerminada?.Invoke(null);
+
+                    await Task.Delay(1000 * TiempoConsulta / 5);
+
+                    pacienteSiendoAtendido.MarcarEspecialidadComoAtendida(actual);
+
+                    if (pacienteSiendoAtendido.TieneEspecialidadesPendientes())
+                    {
+                        logger?.Invoke($"RE-ENCOLADO: {pacienteSiendoAtendido.Nombre} terminó {actual.nombre} en C-{Id}. Regresa a la fila general.");
+                        pacienteSiendoAtendido.estado = false;
+                        pacienteSiendoAtendido.Prioridad++;
+                    }
+                    else
+                    {
+                        pacienteSiendoAtendido.estado = true;
+                    }
+                }
             
             pacienteActual = null;
             onConsultaTerminada?.Invoke(pacienteSiendoAtendido);
