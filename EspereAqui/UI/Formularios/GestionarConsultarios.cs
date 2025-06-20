@@ -6,6 +6,8 @@ using System.Windows.Forms;
 
 namespace EspereAqui.UI.Formularios
 {
+    //Form to manage the clinic's Consultorios.
+    //Allows you to create, edit, delete, and view Consultorios, as well as manage their specialties and status (open/closed).
     public partial class GestionarConsultorios : Form
     {
         private const int MAX_CONSULTORIOS = 15;
@@ -14,22 +16,29 @@ namespace EspereAqui.UI.Formularios
         private Ventana_simulacion simulacion;
         private Clinica clinica;
 
+        //Class constructor
         public GestionarConsultorios(Ventana_simulacion simulacion, Clinica clinica)
         {
             InitializeComponent();
             this.simulacion = simulacion;
             this.clinica = clinica;
+            this.DoubleBuffered = true;
         }
 
+        //Event that fires when the form loads.
+        //Configures the interface, loads the specialties, and updates the list of Consultorios.
         private void GestionarConsultorios_Load(object sender, EventArgs e)
         {
             mainTableLayoutPanel.Location = new Point(0, 0);
             pictureBox1.Controls.Add(mainTableLayoutPanel);
+            typeof(TableLayoutPanel).GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)?.SetValue(mainTableLayoutPanel, true, null);
+
             CargarEspecialidadesComboBox();
             ActualizarListaConsultorios();
             LimpiarCampos();
         }
 
+        // Loads the available specialties in the ComboBox.
         private void CargarEspecialidadesComboBox()
         {
             cmbEspecialidad.Items.Clear();
@@ -39,6 +48,7 @@ namespace EspereAqui.UI.Formularios
             }
         }
 
+        //Updates the list of Consultorios in the interface and displays their information.
         private void ActualizarListaConsultorios()
         {
             object selected = cmbConsultorios.SelectedItem;
@@ -62,6 +72,7 @@ namespace EspereAqui.UI.Formularios
             simulacion.ActualizarVistasCompletas();
         }
 
+        //Clears form fields and resets controls.
         private void LimpiarCampos()
         {
             cmbConsultorios.SelectedIndex = -1;
@@ -73,6 +84,7 @@ namespace EspereAqui.UI.Formularios
             btnEliminar.Enabled = false;
         }
 
+        //Event to add a specialty to the Consultorio being created/edited.
         private void btnAnadirEspecialidad_Click(object sender, EventArgs e)
         {
             if (cmbEspecialidad.SelectedItem == null)
@@ -98,6 +110,7 @@ namespace EspereAqui.UI.Formularios
             }
         }
 
+        //Event to remove a specialty from the Consultorio list.
         private void btnQuitarEspecialidad_Click(object sender, EventArgs e)
         {
             if (lstEspecialidadesAgregadas.SelectedItem == null)
@@ -115,6 +128,7 @@ namespace EspereAqui.UI.Formularios
             lstEspecialidadesAgregadas.Items.Remove(lstEspecialidadesAgregadas.SelectedItem);
         }
 
+        //Event to create a new Consultorio with the selected specialties.
         private void btnCrear_Click(object sender, EventArgs e)
         {
             if (clinica.Consultorios.Count >= MAX_CONSULTORIOS)
@@ -136,7 +150,7 @@ namespace EspereAqui.UI.Formularios
                 return;
             }
 
-            var nuevoConsultorio = new Consultorio();
+            var nuevoConsultorio = new Consultorio(clinica.getNextId());
             nuevoConsultorio.Estado = chkEstado.Checked;
 
             foreach (var item in lstEspecialidadesAgregadas.Items)
@@ -152,10 +166,11 @@ namespace EspereAqui.UI.Formularios
             LimpiarCampos();
         }
 
+        //Event to edit the selected Consultorio, updating its specialties and status.
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (cmbConsultorios.SelectedItem == null) return;
-            
+
             if (lstEspecialidadesAgregadas.Items.Count == 0)
             {
                 MessageBox.Show("Debe añadir al menos una especialidad al consultorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -216,6 +231,7 @@ namespace EspereAqui.UI.Formularios
             LimpiarCampos();
         }
 
+        //Event to delete the selected Consultorio, with validations.
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (cmbConsultorios.SelectedItem == null) return;
@@ -224,10 +240,10 @@ namespace EspereAqui.UI.Formularios
 
             if (consultorioAEliminar.Estado && clinica.Consultorios.Count(c => c.Estado) == 1)
             {
-                 MessageBox.Show("No se puede eliminar el último consultorio abierto.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se puede eliminar el último consultorio abierto.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
+
             var confirmacion = MessageBox.Show($"¿Está seguro de que desea eliminar el Consultorio ID: {consultorioAEliminar.Id}?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacion == DialogResult.Yes)
@@ -239,6 +255,9 @@ namespace EspereAqui.UI.Formularios
             }
         }
 
+
+        //Event that fires when a practice is selected from the list.
+        //Loads its specialties and status into the form controls.
         private void cmbConsultorios_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbConsultorios.SelectedItem is Consultorio consultorioSeleccionado)
@@ -259,11 +278,13 @@ namespace EspereAqui.UI.Formularios
             }
         }
 
+        //Event to clear all form fields.
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
         }
 
+        //Event to return to the simulation window and close the current form.
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             simulacion.StartPosition = FormStartPosition.CenterScreen;

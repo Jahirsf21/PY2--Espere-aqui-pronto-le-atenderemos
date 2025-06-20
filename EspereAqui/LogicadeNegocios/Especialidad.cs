@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace EspereAqui.LogicadeNegocios
 {
+    //Class Especialidad
     public class Especialidad
     {
         public string nombre { get; set; }
 
         public int tiempoConsulta { get; set; }
 
+        //Class constructor, assigns the name and defines the consultation time according to the specialty.
         public Especialidad(string nombre)
         {
             this.nombre = nombre;
@@ -51,6 +53,7 @@ namespace EspereAqui.LogicadeNegocios
             }
         }
 
+        //Function Equals, Compares whether two specialties are the same based on their name.
         public bool Equals(Especialidad esp)
         {
             if (this.nombre == esp.nombre) return true;

@@ -7,6 +7,9 @@ using System.Linq;
 
 namespace EspereAqui.UI
 {
+    //Main clinic simulation window.
+    //Allows you to view and manage offices and patients, control the simulation (start, pause, resume, end),
+    // load data from files, and run the genetic or fitness algorithm.
     public partial class Ventana_simulacion : Form
     {
         private Clinica clinica;
@@ -17,9 +20,10 @@ namespace EspereAqui.UI
         private CrearPacientes formCrearPacientes;
         private GestionarConsultorios formGestionarConsultorios;
 
-        // Variable para llevar la cuenta del tiempo
         private int minutosSimuladosTranscurridos = 0;
 
+        //Class constructor
+        //Initializes the interface, assigns the clinic and simulation mode, and configures the logger.
         public Ventana_simulacion(Ventana_modos modos, Clinica clinica, string modo)
         {
             InitializeComponent();
@@ -27,6 +31,7 @@ namespace EspereAqui.UI
             this.clinica = clinica;
             this.modoSimulacion = modo;
             this.clinica.Logger = (msg) => LogMessage(msg);
+            this.DoubleBuffered = true;
 
             if (modo == "auto")
             {
@@ -39,12 +44,25 @@ namespace EspereAqui.UI
             InitializeComponent();
         }
 
+        //Event that fires when the window loads.
+        //Disables buttons based on their initial state and updates views.
         private void Ventana_simulacion_Load(object sender, EventArgs e)
         {
             btnEmpezarGenetico.Enabled = false;
             ActualizarVistasCompletas();
         }
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            var doubleBufferedProp = typeof(Panel).GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            if (doubleBufferedProp != null)
+            {
+                doubleBufferedProp.SetValue(pnlConsultoriosContainer, true, null);
+                doubleBufferedProp.SetValue(pnlFilaPacientes, true, null);
+            }
+        }
 
+        //Updates all Consultorio and patient views in the interface.
         public void ActualizarVistasCompletas()
         {
             if (this.InvokeRequired)
@@ -56,6 +74,7 @@ namespace EspereAqui.UI
             ActualizarFilaPacientes();
         }
 
+        //Updates the display of Consultorios and their patients.
         private void ActualizarVistaConsultorios()
         {
             pnlConsultoriosContainer.SuspendLayout();
@@ -78,7 +97,7 @@ namespace EspereAqui.UI
                     BorderStyle = BorderStyle.FixedSingle,
                     Tag = consultorio
                 };
-                Color pictureBoxBackgroundColor = consultorio.pacienteActual != null ? Color.FromArgb(120, 10, 140, 10) : Color.Transparent;     
+                Color pictureBoxBackgroundColor = consultorio.pacienteActual != null ? Color.FromArgb(120, 10, 140, 10) : Color.Transparent;
 
                 PictureBox picConsultorio = new PictureBox
                 {
@@ -186,6 +205,7 @@ namespace EspereAqui.UI
             pnlConsultoriosContainer.ResumeLayout();
         }
 
+        //Updates the display of the general patient queue.
         private void ActualizarFilaPacientes()
         {
             pnlFilaPacientes.SuspendLayout();
@@ -243,6 +263,7 @@ namespace EspereAqui.UI
             pnlFilaPacientes.ResumeLayout();
         }
 
+        //Adds a message to the simulation log, with support for threads.
         public void LogMessage(string message)
         {
             if (rtbLog.InvokeRequired)
@@ -254,20 +275,20 @@ namespace EspereAqui.UI
             rtbLog.ScrollToCaret();
         }
 
+        //Start the simulation
         private void IniciarSimulacion()
         {
             btnEmpezarAlgoritmo.Enabled = false;
             btnCargarDatos.Enabled = false;
             btnPausar.Enabled = true;
             btnEmpezarGenetico.Enabled = true;
-            
             minutosSimuladosTranscurridos = 0;
             lblCronometro.Text = "Tiempo: Día 1 - 00:00";
             simulacionTimer.Start();
-
             ActualizarVistasCompletas();
         }
 
+        //End the simulation
         private void FinalizarSimulacion()
         {
             if (this.InvokeRequired)
@@ -275,18 +296,17 @@ namespace EspereAqui.UI
                 this.Invoke(new Action(FinalizarSimulacion));
                 return;
             }
-
-            simulacionTimer.Stop(); 
-            
+            simulacionTimer.Stop();
             btnPausar.Enabled = false;
             btnEmpezarGenetico.Enabled = false;
             btnEmpezarAlgoritmo.Enabled = true;
-            btnCargarDatos.Enabled = true; 
+            btnCargarDatos.Enabled = true;
             btnEmpezarAlgoritmo.Text = "Empezar Simulación";
             _isPaused = false;
             btnPausar.Text = "Pausar";
         }
 
+        //Event to load data from a JSON file.
         private void btnCargarDatos_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Archivos JSON (*.json)|*.json|Todos los archivos (*.*)|*.*";
@@ -300,6 +320,7 @@ namespace EspereAqui.UI
             }
         }
 
+        //Event to open the patient management form.
         private void btnGestionarPacientes_Click(object sender, EventArgs e)
         {
             if (formCrearPacientes == null || formCrearPacientes.IsDisposed)
@@ -310,6 +331,7 @@ namespace EspereAqui.UI
             formCrearPacientes.Show();
         }
 
+        //Event to open the Consultorio management form.
         private void btnGestionarConsultorios_Click(object sender, EventArgs e)
         {
             if (formGestionarConsultorios == null || formGestionarConsultorios.IsDisposed)
@@ -320,29 +342,32 @@ namespace EspereAqui.UI
             formGestionarConsultorios.Show();
         }
 
+        //Start the simulation
         private void btnEmpezarAlgoritmo_Click(object sender, EventArgs e)
         {
             if (clinica.Consultorios.Any() && clinica.FilaClinica.Any())
             {
                 Action callbackActualizarUI = () => ActualizarVistasCompletas();
                 Action callbackFinSimulacion = () => FinalizarSimulacion();
-
-                this.clinica.IniciarFitness(callbackActualizarUI, callbackFinSimulacion); 
-
+                this.clinica.IniciarFitness(callbackActualizarUI, callbackFinSimulacion);
                 IniciarSimulacion();
                 btnEmpezarAlgoritmo.Text = "Simulación en Curso...";
-                LogMessage("Simulación estándar iniciada...");   
-            } else {
-                LogMessage("No se puede empezar la simulación si no hay consultorios ni pacientes."); 
+                LogMessage("Simulación estándar iniciada...");
+            }
+            else
+            {
+                LogMessage("No se puede empezar la simulación si no hay consultorios ni pacientes.");
             }
         }
 
+        //Event to execute the genetic algorithm.
         private void btnEmpezarGenetico_Click(object sender, EventArgs e)
         {
             clinica.Genetico();
             ActualizarVistasCompletas();
         }
 
+        //Event to pause or resume the simulation.
         private void btnPausar_Click(object sender, EventArgs e)
         {
             if (!_isPaused)
@@ -363,6 +388,7 @@ namespace EspereAqui.UI
             ActualizarVistasCompletas();
         }
 
+        //Event to exit the simulation and return to the modes window.
         private void btnSalir_Click(object sender, EventArgs e)
         {
             simulacionTimer.Stop();
@@ -371,6 +397,8 @@ namespace EspereAqui.UI
             this.Close();
         }
 
+        //Event that runs when the simulation window is closed.
+        //Stops the simulation and cleans up resources.
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             simulacionTimer.Stop();
@@ -378,6 +406,8 @@ namespace EspereAqui.UI
             base.OnFormClosing(e);
         }
 
+        //Simulation timer event.
+        //Updates the simulated timer in the interface.
         private void simulacionTimer_Tick(object sender, EventArgs e)
         {
             minutosSimuladosTranscurridos += 5;
